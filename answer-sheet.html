@@ -1,0 +1,2929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Answer Sheet | Welcome Public School</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #E6E6FF;
+            color: #000;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button {
+            font-family: "Poppins", sans-serif;
+        }
+
+
+        /* =========================================================
+           MAIN CONTAINER
+        ========================================================= */
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+
+        /* =========================================================
+           SIDEBAR
+        ========================================================= */
+
+        .sidebar {
+            width: 300px;
+            background: #8A8AFF;
+            padding: 25px;
+
+            display: flex;
+            flex-direction: column;
+
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            position: sticky;
+            top: 0;
+
+            flex-shrink: 0;
+
+            box-shadow: 8px 0 30px rgba(80, 80, 160, 0.18);
+        }
+
+
+        /* =========================================================
+           SCHOOL LOGO
+        ========================================================= */
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+        .logo img {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .logo-text {
+            text-align: center;
+        }
+
+        .logo-text h2 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .logo-text h3 {
+            font-size: 21px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #E6E6FF;
+            margin: 10px 0;
+        }
+
+        .logo-text p:last-child {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           SIDEBAR MENU
+        ========================================================= */
+
+        .sidebar ul {
+            width: 100%;
+        }
+
+        .sidebar li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            padding: 14px 18px;
+
+            border-radius: 10px;
+            margin-bottom: 10px;
+
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+        .sidebar li:hover {
+            background: #CCCCFF;
+            color: #000;
+            transform: translateX(3px);
+        }
+
+        .sidebar li.active {
+            background: #fff;
+            color: #8A8AFF;
+
+            box-shadow: 0 6px 18px rgba(50, 50, 120, 0.15);
+        }
+
+        .sidebar li i {
+            width: 22px;
+            min-width: 22px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .logout-btn {
+            margin-top: 10px;
+        }
+
+
+        /* =========================================================
+           MAIN CONTENT
+        ========================================================= */
+
+        .main {
+            flex: 1;
+            min-width: 0;
+            padding: 30px;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .header-text h1 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .header-text p {
+            margin-top: 8px;
+            color: #555;
+            font-size: 15px;
+        }
+
+
+        /* =========================================================
+           PROFILE BOX
+        ========================================================= */
+
+        .profile-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            background: #CCCCFF;
+
+            padding: 8px 16px;
+
+            border-radius: 50px;
+
+            box-shadow: 0 5px 15px rgba(80, 80, 160, 0.12);
+
+            transition: all 0.3s ease;
+
+            flex-shrink: 0;
+
+            cursor: pointer;
+        }
+
+        .profile-box:hover {
+            transform: translateY(-3px);
+        }
+
+        .profile-box img {
+            width: 52px;
+            height: 52px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #E6E6FF;
+        }
+
+        .profile-box h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .profile-box span {
+            display: block;
+            font-size: 13px;
+            color: #555;
+        }
+
+
+        /* =========================================================
+           ANSWER SHEET INTRO
+        ========================================================= */
+
+        .answer-intro {
+            background: #fff;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            border: 1px solid rgba(138, 138, 255, 0.15);
+
+            box-shadow: 0 8px 25px rgba(80, 80, 160, 0.10);
+
+            margin-bottom: 25px;
+
+            transition: all 0.3s ease;
+        }
+
+        .answer-intro:hover {
+            transform: translateY(-3px);
+        }
+
+        .answer-intro h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 22px;
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+        .answer-intro h2 i {
+            color: #8A8AFF;
+        }
+
+        .answer-intro p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           FILTER SECTION
+        ========================================================= */
+
+        .filter-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 15px;
+
+            background: #CCCCFF;
+
+            padding: 15px 20px;
+
+            border-radius: 15px;
+
+            margin-bottom: 25px;
+        }
+
+        .filter-section label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .filter-section select {
+            padding: 10px 14px;
+
+            border: 1px solid rgba(138, 138, 255, 0.25);
+
+            border-radius: 10px;
+
+            background: #fff;
+
+            font-family: "Poppins", sans-serif;
+            font-size: 13px;
+
+            outline: none;
+
+            cursor: pointer;
+        }
+
+        .filter-section select:focus {
+            border-color: #8A8AFF;
+        }
+
+
+        /* =========================================================
+           ANSWER SHEET GRID
+        ========================================================= */
+
+        .answer-sheet-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 22px;
+        }
+
+
+        /* =========================================================
+           ANSWER SHEET CARD
+        ========================================================= */
+
+        .answer-card {
+            background: #fff;
+
+            border-radius: 20px;
+
+            padding: 22px;
+
+            border: 1px solid rgba(138, 138, 255, 0.15);
+
+            box-shadow: 0 8px 25px rgba(80, 80, 160, 0.10);
+
+            transition: all 0.3s ease;
+
+            overflow: hidden;
+        }
+
+        .answer-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow: 0 12px 30px rgba(80, 80, 160, 0.16);
+        }
+
+
+        /* =========================================================
+           CARD TOP
+        ========================================================= */
+
+        .answer-card-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            margin-bottom: 18px;
+        }
+
+        .subject-icon {
+            width: 55px;
+            height: 55px;
+
+            min-width: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: #E6E6FF;
+
+            color: #8A8AFF;
+
+            font-size: 23px;
+        }
+
+        .answer-card-top h3 {
+            font-size: 18px;
+            font-weight: 600;
+
+            color: #000;
+        }
+
+        .answer-card-top p {
+            font-size: 12px;
+            color: #555;
+
+            margin-top: 3px;
+        }
+
+
+        /* =========================================================
+           CARD DETAILS
+        ========================================================= */
+
+        .answer-details {
+            background: #E6E6FF;
+
+            padding: 14px;
+
+            border-radius: 12px;
+
+            margin-bottom: 18px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 5px 0;
+
+            font-size: 13px;
+        }
+
+        .detail-row span:first-child {
+            color: #555;
+        }
+
+        .detail-row span:last-child {
+            color: #000;
+            font-weight: 600;
+            text-align: right;
+        }
+
+
+        /* =========================================================
+           IMAGE PREVIEW
+        ========================================================= */
+
+        .sheet-preview {
+            width: 100%;
+            height: 220px;
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            background: #E6E6FF;
+
+            margin-bottom: 18px;
+
+            cursor: pointer;
+
+            position: relative;
+        }
+
+        .sheet-preview img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.4s ease;
+        }
+
+        .sheet-preview:hover img {
+            transform: scale(1.04);
+        }
+
+        .preview-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(0, 0, 0, 0.35);
+
+            color: #fff;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            opacity: 0;
+
+            transition: opacity 0.3s ease;
+        }
+
+        .sheet-preview:hover .preview-overlay {
+            opacity: 1;
+        }
+
+
+        /* =========================================================
+           VIEW BUTTON
+        ========================================================= */
+
+        .view-btn {
+            width: 100%;
+
+            border: none;
+
+            padding: 12px 18px;
+
+            border-radius: 10px;
+
+            background: #8A8AFF;
+
+            color: #fff;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+        .view-btn:hover {
+            background: #333B42;
+
+            transform: translateY(-2px);
+        }
+
+        .view-btn i {
+            margin-right: 7px;
+        }
+
+
+        /* =========================================================
+           NO ANSWER SHEET
+        ========================================================= */
+
+        .no-sheets {
+            display: none;
+
+            text-align: center;
+
+            background: #fff;
+
+            border-radius: 20px;
+
+            padding: 50px 25px;
+
+            box-shadow: 0 8px 25px rgba(80, 80, 160, 0.10);
+        }
+
+        .no-sheets i {
+            font-size: 45px;
+            color: #8A8AFF;
+
+            margin-bottom: 15px;
+        }
+
+        .no-sheets h3 {
+            font-size: 20px;
+            margin-bottom: 7px;
+        }
+
+        .no-sheets p {
+            font-size: 13px;
+            color: #555;
+        }
+
+
+        /* =========================================================
+           IMAGE VIEWER / LIGHTBOX
+        ========================================================= */
+
+        .image-modal {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9999;
+
+            background: rgba(0, 0, 0, 0.82);
+
+            padding: 30px;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+
+            width: min(1000px, 95vw);
+
+            max-height: 92vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 78vh;
+
+            object-fit: contain;
+
+            border-radius: 12px;
+
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+
+            background: #fff;
+        }
+
+        .modal-title {
+            color: #fff;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            margin-top: 12px;
+
+            text-align: center;
+        }
+
+        .close-modal {
+            position: absolute;
+
+            right: -5px;
+            top: -45px;
+
+            width: 40px;
+            height: 40px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #fff;
+
+            color: #333B42;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            background: #8A8AFF;
+            color: #fff;
+            transform: rotate(90deg);
+        }
+
+
+        /* =========================================================
+           BUTTON SECTION
+        ========================================================= */
+
+        .button-section {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+        .button-section button {
+            border: none;
+
+            padding: 12px 20px;
+
+            border-radius: 10px;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+        .download-btn {
+            background: #8A8AFF;
+            color: #fff;
+        }
+
+        .print-btn {
+            background: #333B42;
+            color: #fff;
+        }
+
+        .back-btn {
+            background: #CCCCFF;
+            color: #000;
+        }
+
+        .button-section button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+
+        /* =========================================================
+           SCROLLBAR
+        ========================================================= */
+
+        /* Hide scrollbar visuals without disabling scrolling */
+        * {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        *::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        *::-webkit-scrollbar-track,
+        *::-webkit-scrollbar-thumb {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+
+        /* =========================================================
+           1200px
+        ========================================================= */
+
+        @media (max-width: 1200px) {
+
+            .sidebar {
+                width: 250px;
+            }
+
+            .answer-sheet-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        /* =========================================================
+           950px
+        ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .sidebar {
+                width: 220px;
+                padding: 18px;
+            }
+
+            .logo img {
+                width: 105px;
+                height: 105px;
+            }
+
+            .logo-text h2 {
+                font-size: 22px;
+            }
+
+            .logo-text h3 {
+                font-size: 18px;
+            }
+
+            .logo-text p {
+                font-size: 10px;
+            }
+
+            .logo-text p:last-child {
+                font-size: 14px;
+            }
+
+            .sidebar li {
+                padding: 12px 13px;
+                font-size: 14px;
+            }
+
+            .sidebar li i {
+                font-size: 16px;
+            }
+
+            .main {
+                padding: 22px;
+            }
+
+            .header-text h1 {
+                font-size: 28px;
+            }
+
+            .answer-sheet-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =========================================================
+           700px
+        ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: relative;
+
+                width: 100%;
+                height: auto;
+
+                padding: 15px;
+
+                box-shadow: none;
+            }
+
+            .logo {
+                margin: 20px 0;
+            }
+
+            .logo img {
+                width: 85px;
+                height: 85px;
+            }
+
+            .logo-text h2 {
+                font-size: 20px;
+            }
+
+            .logo-text h3 {
+                font-size: 16px;
+            }
+
+            .logo-text p {
+                font-size: 8px;
+                margin: 5px 0;
+            }
+
+            .logo-text p:last-child {
+                font-size: 12px;
+            }
+
+            .sidebar ul {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .sidebar li {
+                margin-bottom: 0;
+                padding: 11px;
+                font-size: 13px;
+            }
+
+            .main {
+                padding: 18px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-text h1 {
+                font-size: 25px;
+            }
+
+            .header-text p {
+                font-size: 13px;
+            }
+
+            .profile-box {
+                width: 100%;
+                border-radius: 18px;
+            }
+
+            .answer-intro {
+                padding: 20px;
+            }
+
+            .answer-intro h2 {
+                font-size: 19px;
+            }
+
+            .answer-intro p {
+                font-size: 13px;
+            }
+
+            .filter-section {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .filter-section select {
+                width: 100%;
+            }
+
+            .answer-sheet-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .answer-card {
+                padding: 20px;
+            }
+
+            .sheet-preview {
+                height: 230px;
+            }
+
+            .button-section {
+                flex-direction: column;
+            }
+
+            .button-section button {
+                width: 100%;
+            }
+
+        }
+
+
+        /* =========================================================
+           450px
+        ========================================================= */
+
+        @media (max-width: 450px) {
+
+            .sidebar ul {
+                grid-template-columns: 1fr;
+            }
+
+            .main {
+                padding: 14px;
+            }
+
+            .header-text h1 {
+                font-size: 22px;
+            }
+
+            .profile-box {
+                padding: 6px 10px;
+            }
+
+            .profile-box img {
+                width: 42px;
+                height: 42px;
+            }
+
+            .profile-box h3 {
+                font-size: 13px;
+            }
+
+            .profile-box span {
+                font-size: 11px;
+            }
+
+            .answer-intro {
+                padding: 16px;
+            }
+
+            .answer-intro h2 {
+                font-size: 17px;
+            }
+
+            .answer-intro p {
+                font-size: 12px;
+            }
+
+            .answer-card {
+                padding: 16px;
+                border-radius: 17px;
+            }
+
+            .answer-card-top h3 {
+                font-size: 16px;
+            }
+
+            .answer-card-top p {
+                font-size: 11px;
+            }
+
+            .subject-icon {
+                width: 48px;
+                height: 48px;
+                min-width: 48px;
+                font-size: 20px;
+            }
+
+            .sheet-preview {
+                height: 200px;
+            }
+
+            .detail-row {
+                font-size: 11px;
+            }
+
+            .view-btn {
+                font-size: 13px;
+            }
+
+        }
+
+
+        /* =========================================================
+           PRINT
+        ========================================================= */
+
+        @media print {
+
+            .sidebar,
+            .profile-box,
+            .filter-section,
+            .button-section,
+            .view-btn,
+            .preview-overlay {
+                display: none !important;
+            }
+
+            .container {
+                display: block;
+            }
+
+            .main {
+                padding: 0;
+            }
+
+            body {
+                background: #fff;
+            }
+
+            .answer-card,
+            .answer-intro {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+
+            .answer-sheet-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        /* =========================================================
+           DASHBOARD-STYLE RESPONSIVE SIDEBAR + MOBILE HEADER
+        ========================================================== */
+
+        .mobile-menu-toggle,
+        .sidebar-overlay {
+            display: none;
+        }
+
+        @media (min-width: 768px) and (max-width: 950px) {
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 80px;
+                z-index: 1000;
+                margin: 0;
+                padding: 10px 22px;
+                background: #FFFFFF;
+                border-bottom: 1px solid rgb(226, 226, 226);
+                box-shadow: none;
+                gap: 14px;
+            }
+
+            .mobile-menu-toggle {
+                width: 48px;
+                height: 48px;
+                flex: 0 0 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background: #E6E6FF;
+                color: #8A8AFF;
+                border-radius: 10px;
+                font-size: 22px;
+                cursor: pointer;
+                transition: all .2s ease;
+            }
+
+            .mobile-menu-toggle:hover {
+                background: #CCCCFF;
+            }
+
+            .header-text {
+                min-width: 0;
+                flex: 1;
+            }
+
+            .header-text h1 {
+                font-size: 28px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .profile-box {
+                flex-shrink: 0;
+            }
+
+            .main {
+                padding: 104px 22px 22px;
+            }
+
+            .sidebar {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                bottom: 0 !important;
+                width: min(300px, 78vw) !important;
+                height: 100vh !important;
+                max-height: 100vh !important;
+                padding: 22px !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                transform: translateX(-105%) !important;
+                transition: transform .28s ease !important;
+                z-index: 2147483647 !important;
+                box-shadow: none !important;
+                display: flex !important;
+                flex-direction: column;
+                background: #8A8AFF !important;
+            }
+
+            .sidebar.sidebar-open {
+                transform: translateX(0) !important;
+            }
+
+            .sidebar ul {
+                display: block !important;
+                grid-template-columns: 1fr !important;
+            }
+
+            .sidebar li {
+                width: 100%;
+            }
+
+            .sidebar-overlay {
+                position: fixed;
+                inset: 0;
+                display: block;
+                background: rgba(0, 0, 0, .38);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: opacity .28s ease, visibility .28s ease;
+                z-index: 2147483646;
+            }
+
+            body.sidebar-is-open .sidebar-overlay {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 60px;
+                z-index: 1000;
+                margin: 0;
+                padding: 7px 14px;
+                background: #FFFFFF;
+                border-bottom: 1px solid rgb(226, 226, 226);
+                box-shadow: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 7px;
+            }
+
+            .mobile-menu-toggle {
+                width: 40px;
+                height: 40px;
+                flex: 0 0 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background: #E6E6FF;
+                color: #8A8AFF;
+                border-radius: 9px;
+                font-size: 19px;
+                cursor: pointer;
+                transition: all .2s ease;
+            }
+
+            .mobile-menu-toggle:hover {
+                background: #CCCCFF;
+            }
+
+            .header-text {
+                min-width: 0;
+                flex: 1;
+            }
+
+            .header-text h1 {
+                font-size: 20px;
+                line-height: 1.2;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .header-text p {
+                display: none;
+            }
+
+            .profile-box {
+                width: auto;
+                max-width: 150px;
+                padding: 4px 8px;
+                border-radius: 16px;
+                gap: 7px;
+            }
+
+            .profile-box img {
+                width: 36px;
+                height: 36px;
+                border-width: 2px;
+            }
+
+            .profile-box h3 {
+                font-size: 11px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .profile-box span {
+                font-size: 9px;
+                white-space: nowrap;
+            }
+
+            .sidebar {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                bottom: 0 !important;
+                width: min(310px, 86vw) !important;
+                height: 100vh !important;
+                max-height: 100vh !important;
+                padding: 22px !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                transform: translateX(-105%) !important;
+                transition: transform .28s ease !important;
+                z-index: 2147483647 !important;
+                box-shadow: none !important;
+                display: flex !important;
+                flex-direction: column;
+                background: #8A8AFF !important;
+            }
+
+            .sidebar.sidebar-open {
+                transform: translateX(0) !important;
+            }
+
+            .sidebar ul {
+                display: block !important;
+                grid-template-columns: 1fr !important;
+            }
+
+            .sidebar li {
+                width: 100%;
+            }
+
+            .sidebar-overlay {
+                position: fixed;
+                inset: 0;
+                display: block;
+                background: rgba(0, 0, 0, .38);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: opacity .28s ease, visibility .28s ease;
+                z-index: 2147483646;
+            }
+
+            body.sidebar-is-open .sidebar-overlay {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            .main {
+                width: 100%;
+                padding: 78px 14px 20px;
+            }
+
+            .header-text h1 {
+                font-size: 19px;
+            }
+
+            .answer-intro {
+                padding: 18px;
+            }
+
+            .answer-intro h2 {
+                font-size: 19px;
+            }
+
+            .filter-section {
+                align-items: stretch;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .filter-section select {
+                width: 100%;
+            }
+
+            .answer-sheet-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .answer-card {
+                padding: 18px;
+            }
+
+            .sheet-preview {
+                height: 230px;
+            }
+
+            .button-section {
+                flex-direction: column;
+            }
+
+            .button-section button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .header {
+                padding-left: 12px;
+                padding-right: 8px;
+            }
+
+            .mobile-menu-toggle {
+                width: 36px;
+                height: 36px;
+                flex-basis: 36px;
+                font-size: 17px;
+            }
+
+            .header-text h1 {
+                font-size: 17px;
+            }
+
+            .profile-box {
+                max-width: 122px;
+                padding: 3px 6px;
+            }
+
+            .profile-box img {
+                width: 32px;
+                height: 32px;
+            }
+
+            .profile-box h3 {
+                font-size: 10px;
+            }
+
+            .profile-box span {
+                font-size: 8px;
+            }
+
+            .main {
+                padding: 74px 10px 18px;
+            }
+
+            .answer-intro {
+                padding: 16px;
+            }
+
+            .answer-intro h2 {
+                font-size: 17px;
+            }
+
+            .answer-intro p {
+                font-size: 12px;
+            }
+
+            .answer-card {
+                padding: 16px;
+                border-radius: 17px;
+            }
+
+            .answer-card-top h3 {
+                font-size: 16px;
+            }
+
+            .answer-card-top p {
+                font-size: 11px;
+            }
+
+            .subject-icon {
+                width: 48px;
+                height: 48px;
+                min-width: 48px;
+                font-size: 20px;
+            }
+
+            .sheet-preview {
+                height: 200px;
+            }
+
+            .detail-row {
+                font-size: 11px;
+            }
+
+            .view-btn {
+                font-size: 13px;
+            }
+        }
+
+        @media print {
+            .mobile-menu-toggle,
+            .sidebar-overlay {
+                display: none !important;
+            }
+        }
+
+    
+
+/* =========================================================
+   FINAL TEACHERS.HTML SIDEBAR MATCH
+   Keep Answer Sheets sidebar identical to teachers.html
+   ========================================================= */
+
+/* Exact desktop sidebar sizing/spacing from teachers.html */
+.sidebar {
+    width: 300px;
+    background: #8A8AFF;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+    box-shadow: 8px 0 30px rgba(80, 80, 160, 0.18);
+}
+
+.sidebar ul {
+    width: 100%;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.sidebar li i {
+    width: 22px;
+    min-width: 22px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.logout-btn {
+    margin-top: 10px;
+}
+
+/* Teacher page's 950px sidebar values */
+@media (max-width: 950px) {
+    .sidebar {
+        width: 220px;
+        padding: 18px;
+    }
+
+    .sidebar li {
+        padding: 12px 13px;
+        font-size: 14px;
+        gap: 12px;
+    }
+
+    .sidebar li i {
+        font-size: 16px;
+    }
+}
+
+/* Exact teachers.html mobile sidebar */
+@media (max-width: 767px) {
+    html,
+    body {
+        scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar,
+    .sidebar::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    .sidebar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: min(310px, 86vw) !important;
+        height: 100vh !important;
+        max-height: 100vh !important;
+        padding: 22px !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        transform: translateX(-105%) !important;
+        transition: transform 0.28s ease !important;
+        z-index: 2147483647 !important;
+        box-shadow: none !important;
+        display: flex !important;
+        flex-direction: column;
+        background: #8A8AFF !important;
+    }
+
+    .sidebar.sidebar-open {
+        transform: translateX(0) !important;
+    }
+
+    /* One item per row — exactly like teachers.html */
+    .sidebar ul {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        width: 100% !important;
+    }
+
+    .sidebar ul li {
+        width: 100% !important;
+        margin-bottom: 8px !important;
+        padding: 12px 14px !important;
+        font-size: 14px !important;
+        gap: 15px !important;
+    }
+
+    .sidebar li i {
+        width: 22px !important;
+        min-width: 22px !important;
+        font-size: 18px !important;
+    }
+
+    .logout-btn {
+        margin-top: 10px !important;
+    }
+
+    .logo {
+        margin-bottom: 25px !important;
+    }
+
+    .logo img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .logo-text h2 {
+        font-size: 20px !important;
+    }
+
+    .logo-text h3 {
+        font-size: 16px !important;
+    }
+
+    .logo-text p {
+        font-size: 9px !important;
+    }
+
+    .logo-text p:last-child {
+        font-size: 12px !important;
+    }
+
+    .sidebar-overlay {
+        position: fixed;
+        inset: 0;
+        display: block;
+        background: rgba(0, 0, 0, 0.38);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.28s ease, visibility 0.28s ease;
+        z-index: 2147483646;
+    }
+
+    body.sidebar-is-open .sidebar-overlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 420px) {
+    .sidebar {
+        width: min(310px, 86vw) !important;
+        padding: 22px !important;
+    }
+
+    .sidebar ul li {
+        padding: 12px 14px !important;
+        font-size: 14px !important;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar-overlay"></div>
+
+
+    <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
+    <aside class="sidebar">
+
+        <!-- SCHOOL LOGO -->
+
+        <div class="logo">
+
+            <!-- CHANGE logo.png ONLY if your logo has another filename -->
+            <img src="images/logo.png" alt="Welcome Public School Logo">
+
+            <div class="logo-text">
+
+                <h2>WELCOME</h2>
+                <h3>PUBLIC SCHOOL</h3>
+
+                <p>Established in 2002</p>
+
+                <p>
+                    Darnea Hat, Po- Gangi Hat,<br>
+                    Dist- Kishanganj
+                </p>
+
+                <p>BIHAR</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR MENU -->
+
+        <ul>
+
+            <!-- Dashboard -->
+            <li onclick="window.location.href='dashboard.html'">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </li>
+
+
+            <!-- Profile -->
+            <li onclick="window.location.href='profile.html'">
+
+                <i class="fa-solid fa-user"></i>
+
+                My Profile
+
+            </li>
+
+
+            <!-- Marks -->
+            <li onclick="window.location.href='marks.html'">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                My Marks
+
+            </li>
+
+
+            <!-- Attendance -->
+            <li onclick="window.location.href='attendance.html'">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                Attendance
+
+            </li>
+
+            <!-- Fees -->
+            <li onclick="window.location.href='fees.html'">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                Fees
+
+            </li>
+
+            <!-- Notices -->
+            <li onclick="window.location.href='notices.html'">
+
+                <i class="fa-solid fa-bell"></i>
+
+                Notices
+
+            </li>
+
+
+            <!-- Timetable -->
+            <li onclick="window.location.href='timetable.html'">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                Timetable
+
+            </li>
+
+
+            
+
+
+            <!-- Teachers -->
+            <li onclick="window.location.href='teachers.html'">
+
+                <i class="fa-solid fa-chalkboard-user"></i>
+
+                Teachers
+
+            </li>
+
+
+            
+
+
+            <!-- =================================================
+                 ANSWER SHEET - ACTIVE
+            ================================================== -->
+
+            <li class="active">
+
+                <i class="fa-solid fa-file-pen"></i>
+
+                Answer Sheets
+
+            </li>
+
+            <li onclick="location.href='results.html'">
+              <i class="fa-solid fa-poll-h"></i> 
+                Our Board Results
+            </li>
+
+
+            <!-- Settings -->
+            <li onclick="window.location.href='settings.html'">
+
+                <i class="fa-solid fa-gear"></i>
+
+                Settings
+
+            </li>
+
+
+            <!-- Logout -->
+            <li class="logout-btn"
+                onclick="logoutUser()">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+    <main class="main">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="header">
+
+            <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="header-text">
+
+                <h1>Answer Sheets</h1>
+
+                <p>
+                    View your examination answer sheets subject-wise
+                </p>
+
+            </div>
+
+
+            <!-- STUDENT PROFILE -->
+
+            <div class="profile-box"
+                 onclick="window.location.href='profile.html'">
+
+                <!-- CHANGE profile.jpg if your profile image has another filename -->
+                <img src="images/student.jpg"
+                     alt="Student Profile">
+
+                <div>
+
+                    <h3>Student Name</h3>
+
+                    <span>Class 10 • Roll No. 01</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             INTRO CARD
+        ====================================================== -->
+
+        <section class="answer-intro">
+
+            <h2>
+
+                <i class="fa-solid fa-file-circle-check"></i>
+
+                My Examination Answer Sheets
+
+            </h2>
+
+            <p>
+                Here you can view the answer sheets uploaded by your
+                teachers for your examinations. Select the subject
+                and click <strong>View Answer Sheet</strong> to see
+                your submitted answer paper.
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FILTER
+        ====================================================== -->
+
+        <div class="filter-section">
+
+            <label for="subjectFilter">
+                <i class="fa-solid fa-filter"></i>
+                Filter Subject:
+            </label>
+
+            <select id="subjectFilter"
+                    onchange="filterSheets()">
+
+                <option value="all">
+                    All Subjects
+                </option>
+
+                <option value="mathematics">
+                    Mathematics
+                </option>
+
+                <option value="science">
+                    Science
+                </option>
+
+                <option value="english">
+                    English
+                </option>
+
+                <option value="social">
+                    Social Science
+                </option>
+
+                <option value="computer">
+                    Computer
+                </option>
+
+                <option value="hindi">
+                    Hindi
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             ANSWER SHEET CARDS
+        ====================================================== -->
+
+        <section class="answer-sheet-grid"
+                 id="answerSheetGrid">
+
+
+
+            <!-- =================================================
+                 MATHEMATICS
+            ================================================== -->
+
+            <div class="answer-card"
+                 data-subject="mathematics">
+
+                <div class="answer-card-top">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-calculator"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Mathematics</h3>
+
+                        <p>Half Yearly Examination</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="answer-details">
+
+                    <div class="detail-row">
+
+                        <span>Exam</span>
+
+                        <span>Half Yearly</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Date</span>
+
+                        <span>15 August 2026</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Pages</span>
+
+                        <span>3 Pages</span>
+
+                    </div>
+
+                </div>
+
+
+                <!--
+                    PUT YOUR ACTUAL IMAGE HERE
+
+                    Example:
+                    answer-sheets/mathematics.jpg
+                -->
+
+                <div class="sheet-preview"
+                     onclick="openImage(
+                     'answer-sheets/mathematics.jpg',
+                     'Mathematics - Half Yearly Examination'
+                     )">
+
+                    <img src="answer-sheets/mathematics.jpg"
+                         alt="Mathematics Answer Sheet">
+
+                    <div class="preview-overlay">
+
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Click to Preview
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button class="view-btn"
+                        onclick="openImage(
+                        'answer-sheets/mathematics.jpg',
+                        'Mathematics - Half Yearly Examination'
+                        )">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View Answer Sheet
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SCIENCE
+            ================================================== -->
+
+            <div class="answer-card"
+                 data-subject="science">
+
+                <div class="answer-card-top">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-flask"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Science</h3>
+
+                        <p>Half Yearly Examination</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="answer-details">
+
+                    <div class="detail-row">
+
+                        <span>Exam</span>
+
+                        <span>Half Yearly</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Date</span>
+
+                        <span>18 August 2026</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Pages</span>
+
+                        <span>4 Pages</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sheet-preview"
+                     onclick="openImage(
+                     'answer-sheets/science.jpg',
+                     'Science - Half Yearly Examination'
+                     )">
+
+                    <img src="answer-sheets/science.jpg"
+                         alt="Science Answer Sheet">
+
+                    <div class="preview-overlay">
+
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Click to Preview
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button class="view-btn"
+                        onclick="openImage(
+                        'answer-sheets/science.jpg',
+                        'Science - Half Yearly Examination'
+                        )">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View Answer Sheet
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ENGLISH
+            ================================================== -->
+
+            <div class="answer-card"
+                 data-subject="english">
+
+                <div class="answer-card-top">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>English</h3>
+
+                        <p>Half Yearly Examination</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="answer-details">
+
+                    <div class="detail-row">
+
+                        <span>Exam</span>
+
+                        <span>Half Yearly</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Date</span>
+
+                        <span>20 August 2026</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Pages</span>
+
+                        <span>3 Pages</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sheet-preview"
+                     onclick="openImage(
+                     'answer-sheets/english.jpg',
+                     'English - Half Yearly Examination'
+                     )">
+
+                    <img src="answer-sheets/english.jpg"
+                         alt="English Answer Sheet">
+
+                    <div class="preview-overlay">
+
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Click to Preview
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button class="view-btn"
+                        onclick="openImage(
+                        'answer-sheets/english.jpg',
+                        'English - Half Yearly Examination'
+                        )">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View Answer Sheet
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SOCIAL SCIENCE
+            ================================================== -->
+
+            <div class="answer-card"
+                 data-subject="social">
+
+                <div class="answer-card-top">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-globe"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Social Science</h3>
+
+                        <p>Half Yearly Examination</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="answer-details">
+
+                    <div class="detail-row">
+
+                        <span>Exam</span>
+
+                        <span>Half Yearly</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Date</span>
+
+                        <span>22 August 2026</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Pages</span>
+
+                        <span>4 Pages</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sheet-preview"
+                     onclick="openImage(
+                     'answer-sheets/social.jpg',
+                     'Social Science - Half Yearly Examination'
+                     )">
+
+                    <img src="answer-sheets/social.jpg"
+                         alt="Social Science Answer Sheet">
+
+                    <div class="preview-overlay">
+
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Click to Preview
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button class="view-btn"
+                        onclick="openImage(
+                        'answer-sheets/social.jpg',
+                        'Social Science - Half Yearly Examination'
+                        )">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View Answer Sheet
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 COMPUTER
+            ================================================== -->
+
+            <div class="answer-card"
+                 data-subject="computer">
+
+                <div class="answer-card-top">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-computer"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Computer</h3>
+
+                        <p>Half Yearly Examination</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="answer-details">
+
+                    <div class="detail-row">
+
+                        <span>Exam</span>
+
+                        <span>Half Yearly</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Date</span>
+
+                        <span>24 August 2026</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Pages</span>
+
+                        <span>2 Pages</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sheet-preview"
+                     onclick="openImage(
+                     'answer-sheets/computer.jpg',
+                     'Computer - Half Yearly Examination'
+                     )">
+
+                    <img src="answer-sheets/computer.jpg"
+                         alt="Computer Answer Sheet">
+
+                    <div class="preview-overlay">
+
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Click to Preview
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button class="view-btn"
+                        onclick="openImage(
+                        'answer-sheets/computer.jpg',
+                        'Computer - Half Yearly Examination'
+                        )">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View Answer Sheet
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 HINDI
+            ================================================== -->
+
+            <div class="answer-card"
+                 data-subject="hindi">
+
+                <div class="answer-card-top">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-language"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Hindi</h3>
+
+                        <p>Half Yearly Examination</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="answer-details">
+
+                    <div class="detail-row">
+
+                        <span>Exam</span>
+
+                        <span>Half Yearly</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Date</span>
+
+                        <span>26 August 2026</span>
+
+                    </div>
+
+                    <div class="detail-row">
+
+                        <span>Pages</span>
+
+                        <span>3 Pages</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sheet-preview"
+                     onclick="openImage(
+                     'answer-sheets/hindi.jpg',
+                     'Hindi - Half Yearly Examination'
+                     )">
+
+                    <img src="answer-sheets/hindi.jpg"
+                         alt="Hindi Answer Sheet">
+
+                    <div class="preview-overlay">
+
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Click to Preview
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button class="view-btn"
+                        onclick="openImage(
+                        'answer-sheets/hindi.jpg',
+                        'Hindi - Half Yearly Examination'
+                        )">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View Answer Sheet
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             NO SHEETS MESSAGE
+        ====================================================== -->
+
+        <div class="no-sheets"
+             id="noSheets">
+
+            <i class="fa-solid fa-file-circle-xmark"></i>
+
+            <h3>No Answer Sheet Found</h3>
+
+            <p>
+                No answer sheet is available for the selected subject.
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             BOTTOM BUTTONS
+        ====================================================== -->
+
+        <div class="button-section">
+
+            <button class="download-btn"
+                    onclick="downloadReport()">
+
+                <i class="fa-solid fa-download"></i>
+
+                Download Report
+
+            </button>
+
+
+            <button class="print-btn"
+                    onclick="window.print()">
+
+                <i class="fa-solid fa-print"></i>
+
+                Print
+
+            </button>
+
+
+            <button class="back-btn"
+                    onclick="window.location.href='index.html'">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Dashboard
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =============================================================
+     IMAGE MODAL
+============================================================== -->
+
+<div class="image-modal"
+     id="imageModal"
+     onclick="closeModal(event)">
+
+    <div class="modal-content">
+
+        <button class="close-modal"
+                onclick="closeImage()">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <img id="modalImage"
+             src=""
+             alt="Answer Sheet">
+
+
+        <div class="modal-title"
+             id="modalTitle">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =============================================================
+     JAVASCRIPT
+============================================================== -->
+
+<script>
+
+
+    /* =========================================================
+       OPEN ANSWER SHEET IMAGE
+    ========================================================== */
+
+    function openImage(imagePath, title) {
+
+        const modal = document.getElementById("imageModal");
+
+        const modalImage = document.getElementById("modalImage");
+
+        const modalTitle = document.getElementById("modalTitle");
+
+
+        modalImage.src = imagePath;
+
+        modalTitle.textContent = title;
+
+
+        modal.classList.add("show");
+
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+
+    /* =========================================================
+       CLOSE IMAGE
+    ========================================================== */
+
+    function closeImage() {
+
+        const modal = document.getElementById("imageModal");
+
+
+        modal.classList.remove("show");
+
+
+        document.body.style.overflow = "";
+
+    }
+
+
+
+    /* =========================================================
+       CLOSE WHEN CLICKING OUTSIDE IMAGE
+    ========================================================== */
+
+    function closeModal(event) {
+
+        if (event.target.id === "imageModal") {
+
+            closeImage();
+
+        }
+
+    }
+
+
+
+    /* =========================================================
+       ESC KEY TO CLOSE IMAGE
+    ========================================================== */
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "Escape") {
+
+            closeImage();
+
+        }
+
+    });
+
+
+
+    /* =========================================================
+       SUBJECT FILTER
+    ========================================================== */
+
+    function filterSheets() {
+
+        const selectedSubject =
+            document.getElementById("subjectFilter").value;
+
+
+        const cards =
+            document.querySelectorAll(".answer-card");
+
+
+        const noSheets =
+            document.getElementById("noSheets");
+
+
+        let visibleCards = 0;
+
+
+        cards.forEach(function(card) {
+
+            const cardSubject =
+                card.getAttribute("data-subject");
+
+
+            if (
+                selectedSubject === "all" ||
+                cardSubject === selectedSubject
+            ) {
+
+                card.style.display = "";
+
+                visibleCards++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        if (visibleCards === 0) {
+
+            noSheets.style.display = "block";
+
+        } else {
+
+            noSheets.style.display = "none";
+
+        }
+
+    }
+
+
+
+    /* =========================================================
+       DOWNLOAD REPORT
+    ========================================================== */
+
+    function downloadReport() {
+
+        alert(
+            "Answer Sheet report download will be connected to the school system later."
+        );
+
+    }
+
+
+
+    /* =========================================================
+       LOGOUT
+    ========================================================== */
+
+    function logoutUser() {
+
+        const confirmLogout =
+            confirm("Are you sure you want to logout?");
+
+
+        if (confirmLogout) {
+
+            window.location.href = "login.html";
+
+        }
+
+    }
+
+
+
+    /* =========================================================
+       DASHBOARD-STYLE MOBILE SIDEBAR
+    ========================================================== */
+
+    (function () {
+        const sidebar = document.querySelector(".sidebar");
+        const menuToggle = document.querySelector(".mobile-menu-toggle");
+        const overlay = document.querySelector(".sidebar-overlay");
+
+        if (!sidebar || !menuToggle) return;
+
+        function setSidebarState(open) {
+            sidebar.classList.toggle("sidebar-open", open);
+            document.body.classList.toggle("sidebar-is-open", open);
+            menuToggle.setAttribute("aria-expanded", String(open));
+            menuToggle.setAttribute(
+                "aria-label",
+                open ? "Close navigation menu" : "Open navigation menu"
+            );
+
+            const icon = menuToggle.querySelector("i");
+            if (icon) {
+                icon.classList.toggle("fa-bars", !open);
+                icon.classList.toggle("fa-xmark", open);
+            }
+        }
+
+        menuToggle.addEventListener("click", function (event) {
+            event.stopPropagation();
+            setSidebarState(!sidebar.classList.contains("sidebar-open"));
+        });
+
+        if (overlay) {
+            overlay.addEventListener("click", function () {
+                setSidebarState(false);
+            });
+        }
+
+        sidebar.querySelectorAll("li").forEach(function (item) {
+            item.addEventListener("click", function () {
+                if (window.innerWidth <= 767) {
+                    setSidebarState(false);
+                }
+            });
+        });
+
+        document.addEventListener("click", function (event) {
+            if (window.innerWidth <= 767 &&
+                sidebar.classList.contains("sidebar-open") &&
+                !sidebar.contains(event.target) &&
+                !menuToggle.contains(event.target)) {
+                setSidebarState(false);
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && sidebar.classList.contains("sidebar-open")) {
+                setSidebarState(false);
+            }
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 950) {
+                setSidebarState(false);
+            }
+        });
+
+        setSidebarState(false);
+    })();
+
+</script>
+
+
+</body>
+</html>

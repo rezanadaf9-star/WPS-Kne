@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Board Results | Welcome Public School</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Results CSS -->
+    <link rel="stylesheet" href="results.css">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- SCHOOL LOGO -->
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="School Logo">
+
+            <div class="logo-text">
+
+                <h2>WELCOME</h2>
+
+                <h2>PUBLIC SCHOOL</h2>
+
+                <p class="school-info">
+                    Established in 2002
+                </p>
+
+                <p class="school-info">
+                    Darnea hat, Dist- Kishanganj
+                </p>
+
+                <p class="school-info state">
+                    BIHAR
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR MENU -->
+
+        <ul>
+
+
+            <!-- Dashboard -->
+
+            <li onclick="window.location.href='dashboard.html'">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </li>
+
+
+            <!-- Profile -->
+
+            <li onclick="window.location.href='profile.html'">
+
+                <i class="fa-solid fa-user"></i>
+
+                My Profile
+
+            </li>
+
+
+            <!-- Marks -->
+
+            <li onclick="window.location.href='marks.html'">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <span>My Marks</span>
+
+            </li>
+
+
+            <!-- Attendance -->
+
+            <li onclick="window.location.href='attendance.html'">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>Attendance</span>
+
+            </li>
+
+
+            <!-- Fees -->
+
+            <li onclick="window.location.href='fees.html'">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                <span>Fees</span>
+
+            </li>
+
+
+            <!-- Notices -->
+
+            <li onclick="window.location.href='notices.html'">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>Notices</span>
+
+            </li>
+
+
+            <!-- Timetable -->
+
+            <li onclick="window.location.href='timetable.html'">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <span>Timetable</span>
+
+            </li>
+
+
+            <!-- Teachers -->
+
+            <li onclick="window.location.href='teachers.html'">
+
+                <i class="fa-solid fa-chalkboard-user"></i>
+
+                Teachers
+
+            </li>
+
+
+            <!-- Answer Sheets -->
+
+            <li onclick="window.location.href='answer-sheet.html'">
+
+                <i class="fa-solid fa-file-pen"></i>
+
+                Answer Sheets
+
+            </li>
+
+
+            <!-- BOARD RESULTS -->
+
+            <li class="active">
+
+                <i class="fa-solid fa-poll-h"></i>
+
+                Our Board Results
+
+            </li>
+
+
+            <!-- Settings -->
+
+            <li onclick="window.location.href='settings.html'">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </li>
+
+            <li class="logout-btn" onclick="window.location.href='login.html'">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Logout
+            </li>
+
+
+        </ul>
+
+
+        <!-- MOTIVATION CARD -->
+
+        <div class="motivation">
+
+            <img src="images/trophy.png" alt="Trophy">
+
+            <h3>
+                Keep Learning,<br>
+                Keep Growing!
+            </h3>
+
+            <p>
+                You are capable of amazing things!
+            </p>
+
+        </div>
+
+
+    </aside>
+
+    <div aria-hidden="true" class="sidebar-overlay"></div>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             PAGE HEADER
+        ================================================== -->
+
+        <header class="results-header">
+          <button aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-toggle" type="button"><i class="fa-solid fa-bars"></i></button>
+
+
+            <div class="header-content">
+
+                <div class="header-icon">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h1>
+                        <span class="desktop-results-title">Matric Board Toppers</span>
+                    </h1>
+
+                    <p>
+                        Our students who have scored the highest
+                        marks in 10th board (matrik) till now
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- HEADER PROFILE -->
+
+            <div class="header-right">
+
+
+                <div class="notification">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>3</span>
+
+                </div>
+
+
+                <div class="profile" onclick="location.href='profile.html'">
+
+                    <img
+                        src="images/student.jpg"
+                        alt="Student">
+
+                    <div>
+
+                        <h4>
+                            Md Jakariya
+                        </h4>
+
+                        <p>
+                            Student
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             TOP 10 SECTION
+        ================================================== -->
+
+        <section class="top-scorers-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        OUR ACHIEVERS
+                    </span>
+
+                    <h2>
+                        Top 10 Board Toppers
+                    </h2>
+
+                    <p>
+                        Celebrating the outstanding achievements
+                        of our students.
+                    </p>
+
+                </div>
+
+                <div class="trophy-heading-icon">
+
+                    <i class="fa-solid fa-medal"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TOPPER CARDS
+            ================================================== -->
+
+            <div class="topper-grid">
+
+
+                <!-- 1 -->
+
+                <div class="topper-card first">
+
+                    <div class="rank-badge">
+                        #1
+                    </div>
+
+                    <div class="topper-image">
+
+                        <img
+                            src="images/topper1.jpg"
+                            alt="Topper 1">
+
+                    </div>
+
+                    <div class="topper-info">
+
+                        <h3>
+                            Mubassir Hayat
+                        </h3>
+
+                        <div class="marks">
+                            <i class="fa-solid fa-star"></i>
+                            472 / 500
+                        </div>
+
+                        <p>
+                            BSEB Roll No:
+                            <strong>0000000</strong>
+                        </p>
+
+                        <p class="batch">
+                          BATCH:
+                          <strong class="batch-year">2022</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 2 -->
+
+                <div class="topper-card">
+
+                    <div class="rank-badge">
+                        #2
+                    </div>
+
+                    <div class="topper-image">
+
+                        <img
+                            src="images/topper2.jpg"
+                            alt="Topper 2">
+
+                    </div>
+
+                    <div class="topper-info">
+
+                        <h3>
+                            Mukarram Hasmi
+                        </h3>
+
+                        <div class="marks">
+                            <i class="fa-solid fa-star"></i>
+                            470 / 500
+                        </div>
+
+                        <p>
+                            BSEB Roll No:
+                            <strong>0000000</strong>
+                        </p>
+
+                        <p class="batch">
+                          BATCH:
+                          <strong class="batch-year">2022</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 3 -->
+
+                <div class="topper-card">
+
+                    <div class="rank-badge">
+                        #3
+                    </div>
+
+                    <div class="topper-image">
+
+                        <img
+                            src="images/topper3.jpg"
+                            alt="Topper 3">
+
+                    </div>
+
+                    <div class="topper-info">
+
+                        <h3>
+                            Nazim Haider
+                        </h3>
+
+                        <div class="marks">
+                            <i class="fa-solid fa-star"></i>
+                            467 / 500
+                        </div>
+
+                        <p>
+                            BSEB Roll No:
+                            <strong>0000000</strong>
+                        </p>
+
+                        <p class="batch">
+                          BATCH:
+                          <strong class="batch-year">2021</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 4 -->
+
+                <div class="topper-card">
+
+                    <div class="rank-badge">
+                        #4
+                    </div>
+
+                    <div class="topper-image">
+
+                        <img
+                            src="images/topper4.jpg"
+                            alt="Topper 4">
+
+                    </div>
+
+                    <div class="topper-info">
+
+                        <h3>
+                            Nadaf Reza
+                        </h3>
+
+                        <div class="marks">
+                            <i class="fa-solid fa-star"></i>
+                            462 / 500
+                        </div>
+
+                        <p>
+                            BSEB Roll No:
+                            <strong>0000000</strong>
+                        </p>
+
+                        <p class="batch">
+                          BATCH:
+                          <strong class="batch-year">2021</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 5 -->
+
+                <div class="topper-card">
+
+                    <div class="rank-badge">
+                        #5
+                    </div>
+
+                    <div class="topper-image">
+
+                        <img
+                            src="images/topper5.jpg"
+                            alt="Topper 5">
+
+                    </div>
+
+                    <div class="topper-info">
+
+                        <h3>
+                            Topper Name 5
+                        </h3>
+
+                        <div class="marks">
+                            <i class="fa-solid fa-star"></i>
+                            460 / 500
+                        </div>
+
+                        <p>
+                            BSEB Roll No:
+                            <strong>100005</strong>
+                        </p>
+
+                        <p class="batch">
+                          BATCH:
+                          <strong class="batch-year">0000</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 6 -->
+
+                <div class="topper-card">
+
+                    <div class="rank-badge">
+                        #6
+                    </div>
+
+                    <div class="topper-image">
+
+                        <img
+                            src="images/topper6.jpg"
+                            alt="Topper 6">
+
+                    </div>
+
+                    <div class="topper-info">
+
+                        <h3>
+                            Topper Name 6
+                        </h3>
+
+                        <div class="marks">
+                            <i class="fa-solid fa-star"></i>
+                            455 / 500
+                        </div>
+
+                        <p>
+                            BSEB Roll No:
+                            <strong>100006</strong>
+                        </p>
+
+                        <p class="batch">
+                          BATCH:
+                          <strong class="batch-year">0000</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 7 -->
+
+                <div class="topper-card">
+
+                    <div class="rank-badge">
+                        #7
+                    </div>
+
+                    <div class="topper-image">
+
+                        <img
+                            src="images/topper7.jpg"
+                            alt="Topper 7">
+
+                    </div>
+
+                    <div class="topper-info">
+
+                        <h3>
+                            Topper Name 7
+                        </h3>
+
+                        <div class="marks">
+                            <i class="fa-solid fa-star"></i>
+                            450 / 500
+                        </div>
+
+                        <p>
+                            BSEB Roll No:
+                            <strong>100007</strong>
+                        </p>
+
+                        <p class="batch">
+                          BATCH:
+                          <strong class="batch-year">0000</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 8 -->
+
+                <div class="topper-card">
+
+                    <div class="rank-badge">
+                        #8
+                    </div>
+
+                    <div class="topper-image">
+
+                        <img
+                            src="images/topper8.jpg"
+                            alt="Topper 8">
+
+                    </div>
+
+                    <div class="topper-info">
+
+                        <h3>
+                            Topper Name 8
+                        </h3>
+
+                        <div class="marks">
+                            <i class="fa-solid fa-star"></i>
+                            445 / 500
+                        </div>
+
+                        <p>
+                            BSEB Roll No:
+                            <strong>100008</strong>
+                        </p>
+
+                        <p class="batch">
+                          BATCH:
+                          <strong class="batch-year">0000</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 9 -->
+
+                <div class="topper-card">
+
+                    <div class="rank-badge">
+                        #9
+                    </div>
+
+                    <div class="topper-image">
+
+                        <img
+                            src="images/topper9.jpg"
+                            alt="Topper 9">
+
+                    </div>
+
+                    <div class="topper-info">
+
+                        <h3>
+                            Topper Name 9
+                        </h3>
+
+                        <div class="marks">
+                            <i class="fa-solid fa-star"></i>
+                            440 / 500
+                        </div>
+
+                        <p>
+                            BSEB Roll No:
+                            <strong>100009</strong>
+                        </p>
+
+                        <p class="batch">
+                          BATCH:
+                          <strong class="batch-year">2022</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 10 -->
+
+                <div class="topper-card">
+
+                    <div class="rank-badge">
+                        #10
+                    </div>
+
+                    <div class="topper-image">
+
+                        <img
+                            src="images/topper10.jpg"
+                            alt="Topper 10">
+
+                    </div>
+
+                    <div class="topper-info">
+
+                        <h3>
+                            Topper Name 10
+                        </h3>
+
+                        <div class="marks">
+                            <i class="fa-solid fa-star"></i>
+                            435 / 500
+                        </div>
+
+                        <p>
+                            BSEB Roll No:
+                            <strong>100010</strong>
+                        </p>
+
+                        <p class="batch">
+                          BATCH:
+                          <strong class="batch-year">2022</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LAST 10 YEARS RESULTS
+        ================================================== -->
+
+        <section class="years-section">
+
+
+            <div class="years-heading">
+
+                <div class="years-icon">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        Board Results Archive
+                    </h2>
+
+                    <p>
+                        Explore our school's board examination
+                        results from the last 10 years.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- YEAR BUTTONS -->
+
+            <div class="year-buttons">
+
+
+                <button
+                    onclick="location.href='2025result.html'">
+
+                    <span class="year-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="year-text">
+
+                        <strong>
+                            2025
+                        </strong>
+
+                        <small>
+                            Board Results
+                        </small>
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <button
+                    onclick="location.href='2024result.html'">
+
+                    <span class="year-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="year-text">
+
+                        <strong>
+                            2024
+                        </strong>
+
+                        <small>
+                            Board Results
+                        </small>
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <button
+                    onclick="location.href='2023result.html'">
+
+                    <span class="year-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="year-text">
+
+                        <strong>
+                            2023
+                        </strong>
+
+                        <small>
+                            Board Results
+                        </small>
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <button
+                    onclick="location.href='2022result.html'">
+
+                    <span class="year-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="year-text">
+
+                        <strong>
+                            2022
+                        </strong>
+
+                        <small>
+                            Board Results
+                        </small>
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <button
+                    onclick="location.href='2021result.html'">
+
+                    <span class="year-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="year-text">
+
+                        <strong>
+                            2021
+                        </strong>
+
+                        <small>
+                            Board Results
+                        </small>
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <button
+                    onclick="location.href='2020result.html'">
+
+                    <span class="year-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="year-text">
+
+                        <strong>
+                            2020
+                        </strong>
+
+                        <small>
+                            Board Results
+                        </small>
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <button
+                    onclick="location.href='2019result.html'">
+
+                    <span class="year-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="year-text">
+
+                        <strong>
+                            2019
+                        </strong>
+
+                        <small>
+                            Board Results
+                        </small>
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <button
+                    onclick="location.href='2018result.html'">
+
+                    <span class="year-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="year-text">
+
+                        <strong>
+                            2018
+                        </strong>
+
+                        <small>
+                            Board Results
+                        </small>
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <button
+                    onclick="location.href='2017result.html'">
+
+                    <span class="year-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="year-text">
+
+                        <strong>
+                            2017
+                        </strong>
+
+                        <small>
+                            Board Results
+                        </small>
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <button
+                    onclick="location.href='2016result.html'">
+
+                    <span class="year-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="year-text">
+
+                        <strong>
+                            2016
+                        </strong>
+
+                        <small>
+                            Board Results
+                        </small>
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            © 2002 Welcome Public School.
+            All Rights Reserved.
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+<script src="results.js"></script>
+<script src="common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Learning Center | Welcome Public School</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Jitsi External API -->
+    <script src="https://meet.jit.si/external_api.js"></script>
+    <link rel="stylesheet" href="learning.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <!-- =====================================================
+             SIDEBAR
+             ===================================================== -->
+
+      <aside class="sidebar">
+        <div class="school-brand">
+          <img src="images/logo.png" alt="Welcome Public School Logo" />
+
+          <h2>
+            <span>WELCOME</span>
+            <span>PUBLIC SCHOOL</span>
+          </h2>
+
+          <div class="established">Established in 2002</div>
+
+          <div class="address">
+            Darnea Hat, Po- Gangi Hat<br />
+            Dist- Kishanganj<br />
+            <span>BIHAR</span>
+          </div>
+        </div>
+
+        <div class="menu-title">Learning Center</div>
+
+        <nav class="sidebar-menu">
+          <a href="#ptmMeeting" class="active">
+            <i class="fa-solid fa-users"></i>
+            <span>PTM</span>
+          </a>
+
+          <a href="ai-tutor.html">
+            <i class="fa-solid fa-robot"></i>
+            <span>AI Tutor</span>
+          </a>
+
+          <a href="motivational.html">
+            <i class="fa-solid fa-fire"></i>
+            <span>Motivational Sessions</span>
+          </a>
+
+          <a href="super.html">
+            <i class="fa-solid fa-star"></i>
+            <span>Super 15</span>
+          </a>
+
+          <a href="digital-classroom.html">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <span>Digital Classroom</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <a href="dashboard.html" class="back-dashboard">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Dashboard</span>
+          </a>
+        </div>
+      </aside>
+
+    <div aria-hidden="true" class="sidebar-overlay"></div>
+
+      <!-- =====================================================
+             MAIN CONTENT
+             ===================================================== -->
+
+      <main class="main-content">
+        <!-- TOP HEADER -->
+
+        <header class="top-header">
+          <button aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-toggle" type="button"><i class="fa-solid fa-bars"></i></button>
+          <div class="page-heading">
+            <small>PTM Portal</small>
+            <h1>Parent Teacher Meeting</h1>
+            <p>Learn, connect and grow with Welcome Public School.</p>
+          </div>
+
+          <div class="header-actions">
+            <a href="#" class="notification-btn">
+              <i class="fa-regular fa-bell"></i>
+            </a>
+
+            <a href="#" class="profile-mini">
+              <img src="images/student.jpg" alt="Student" />
+              <span>Student</span>
+            </a>
+          </div>
+        </header>
+
+        <!-- PTM SECTION -->
+
+        <section class="ptm-section" id="ptmMeeting">
+          <div class="section-heading">
+            <span class="live-badge">
+              <span></span>
+              LIVE
+            </span>
+          </div>
+
+          <!-- JITSI EMBEDDED WINDOW -->
+
+          <div class="jitsi-wrapper">
+            <div class="jitsi-header">
+              <div class="meeting-title">
+                <span class="meeting-live-dot"></span>
+
+                <div>
+                  <strong> Welcome Public School PTM </strong>
+
+                  <small> Secure live video meeting </small>
+                </div>
+              </div>
+
+              <div class="meeting-status" id="meetingStatus">Not joined</div>
+            </div>
+
+            <!-- REAL JITSI WILL LOAD HERE -->
+
+            <div id="jitsi-container"></div>
+
+            <!-- JOIN SCREEN -->
+
+            <div class="jitsi-placeholder" id="jitsiPlaceholder">
+              <div class="placeholder-icon" id="meetingCameraIcon">
+                <span class="camera-wave wave-one"></span>
+                <span class="camera-wave wave-two"></span>
+                <span class="camera-wave wave-three"></span>
+
+                <i class="fa-solid fa-video"></i>
+              </div>
+
+              <h3>Ready to join the meeting?</h3>
+
+              <p>Your camera and microphone will be requested after joining.</p>
+
+              <button class="join-ptm-btn" id="joinJitsiBtn">
+                <i class="fa-solid fa-video"></i>
+                Join PTM
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="page-footer">
+          © 2026 Welcome Public School. All Rights Reserved.
+        </footer>
+      </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="learning.js"></script>
+  </body>
+</html>

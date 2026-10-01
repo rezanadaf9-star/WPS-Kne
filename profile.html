@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Student Profile | Welcome Public School
+  </title>
+  <link href="profile.css" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+ </head>
+ <body>
+  <div class="container">
+   <!-- ================= Sidebar ================= -->
+   <aside class="sidebar">
+    <div class="logo">
+     <img alt="School Logo" src="images/logo.png"/>
+     <div class="logo-text">
+      <h2>
+       WELCOME
+      </h2>
+      <h3>
+       PUBLIC SCHOOL
+      </h3>
+      <p>
+       Established in 2002
+      </p>
+      <p>
+       Darnea Hat, Po- Gangi Hat, Dist- Kishanganj
+      </p>
+      <p>
+       BIHAR
+      </p>
+     </div>
+    </div>
+    <ul>
+     <li onclick="location.href='dashboard.html'">
+      <i class="fa-solid fa-house">
+      </i>
+      Dashboard
+     </li>
+     <li class="active">
+      <i class="fa-solid fa-user">
+      </i>
+      My Profile
+     </li>
+     <li onclick="location.href='marks.html'">
+      <i class="fa-solid fa-file-lines">
+      </i>
+      My Marks
+     </li>
+     <li onclick="location.href='attendance.html'">
+      <i class="fa-solid fa-calendar-check">
+      </i>
+      Attendance
+     </li>
+     <li onclick="location.href='fees.html'">
+      <i class="fa-solid fa-indian-rupee-sign">
+      </i>
+      <span>
+       Fees
+      </span>
+     </li>
+     <li onclick="location.href='notices.html'">
+      <i class="fa-solid fa-bell">
+      </i>
+      Notices
+     </li>
+     <li onclick="location.href='timetable.html'">
+      <i class="fa-solid fa-clock">
+      </i>
+      Timetable
+     </li>
+     <li onclick="location.href='teachers.html'">
+      <i class="fa-solid fa-chalkboard-user">
+      </i>
+      Teachers
+     </li>
+     <li onclick="location.href='answer-sheet.html'">
+      <i class="fa-solid fa-file-pen">
+      </i>
+      Answer Sheets
+     </li>
+     <li onclick="location.href='results.html'">
+      <i class="fa-solid fa-poll-h">
+      </i>
+      Our Board Results
+     </li>
+     <li onclick="location.href='settings.html'">
+      <i class="fa-solid fa-gear">
+      </i>
+      <span>
+       Settings
+      </span>
+     </li>
+     <li class="logout-btn" onclick="window.location.href='login.html'">
+      <i class="fa-solid fa-right-from-bracket">
+      </i>
+      Logout
+     </li>
+    </ul>
+   </aside>
+   <div aria-hidden="true" class="sidebar-overlay">
+   </div>
+   <!-- ================= Main ================= -->
+   <main class="main">
+    <!-- Header -->
+    <header>
+     <button aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-toggle" type="button">
+      <i class="fa-solid fa-bars">
+      </i>
+     </button>
+     <div>
+      <h1>
+       Student Profile
+      </h1>
+      <p>
+       View your personal and academic information.
+      </p>
+     </div>
+     <div class="profile-box" onclick="location.href='profile.html'">
+      <img src="images/student.jpg"/>
+      <div>
+       <h3>
+        Md Jakariya
+       </h3>
+       <span>
+        Class 10 • Roll No. 02
+       </span>
+      </div>
+     </div>
+    </header>
+    <!-- Profile Card -->
+    <section class="profile-card">
+     <div class="left-profile">
+      <img src="images/student.jpg"/>
+      <h2>
+       Md Jakariya
+      </h2>
+      <p>
+       Class X - A
+      </p>
+      <p>
+       Roll Number : 02
+      </p>
+      <button>
+       Edit Profile
+      </button>
+     </div>
+     <div class="right-profile">
+      <!-- Personal -->
+      <div class="section">
+       <h2>
+        Personal Information
+       </h2>
+       <div class="grid">
+        <div class="item">
+         <label>
+          Admission No
+         </label>
+         <span>
+          20250001
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Registration No
+         </label>
+         <span>
+          BR1025487
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Date of Birth
+         </label>
+         <span>
+          12 June 2010
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Gender
+         </label>
+         <span>
+          Male
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Blood Group
+         </label>
+         <span>
+          A+
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Religion
+         </label>
+         <span>
+          Islam
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- Parent -->
+      <div class="section">
+       <h2>
+        Parent Information
+       </h2>
+       <div class="grid">
+        <div class="item">
+         <label>
+          Father Name
+         </label>
+         <span>
+          Md Nazim
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Mother Name
+         </label>
+         <span>
+          Naziya Khurshedi
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Phone Number
+         </label>
+         <span>
+          0000000000
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Email
+         </label>
+         <span>
+          student@email.com
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- Address -->
+      <div class="section">
+       <h2>
+        Address
+       </h2>
+       <div class="grid">
+        <div class="item">
+         <label>
+          Village
+         </label>
+         <span>
+          Bara Altabari
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Post Office
+         </label>
+         <span>
+          Gangi Hat
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          District
+         </label>
+         <span>
+          Kishanganj
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          State
+         </label>
+         <span>
+          Bihar
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- Academic -->
+      <div class="section">
+       <h2>
+        Academic Information
+       </h2>
+       <div class="grid">
+        <div class="item">
+         <label>
+          Session
+         </label>
+         <span>
+          2026-2027
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Class
+         </label>
+         <span>
+          X
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Section
+         </label>
+         <span>
+          A
+         </span>
+        </div>
+        <div class="item">
+         <label>
+          Class Teacher
+         </label>
+         <span>
+          Asif Sir
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- Buttons -->
+      <div class="buttons">
+       <button class="blue">
+        <i class="fa-solid fa-key">
+        </i>
+        Change Password
+       </button>
+       <button class="green">
+        <i class="fa-solid fa-download">
+        </i>
+        Download Profile
+       </button>
+       <button class="grey" onclick="location.href='index.html'">
+        <i class="fa-solid fa-arrow-left">
+        </i>
+        Back Dashboard
+       </button>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script src="profile.js">
+  </script>
+  <script src="common.js">
+  </script>
+ </body>
+</html>

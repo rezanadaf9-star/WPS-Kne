@@ -1,0 +1,1051 @@
+/*====================================================
+  GOOGLE FONT
+====================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*====================================================
+  RESET
+====================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #E6E6FF;
+    color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*====================================================
+  CONTAINER
+====================================================*/
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/*====================================================
+  SIDEBAR
+====================================================*/
+
+.sidebar {
+    width: 300px;
+
+    background: #8A8AFF;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    position: sticky;
+    top: 0;
+
+    flex-shrink: 0;
+
+    box-shadow: 8px 0 30px rgba(80, 80, 160, 0.18);
+}
+
+
+/*====================================================
+  LOGO
+====================================================*/
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.logo img {
+    width: 130px;
+    height: 130px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+.logo-text {
+    text-align: center;
+}
+
+.logo-text h2 {
+    color: #FFFFFF;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    margin: -5px 0 2px 0;
+}
+
+.logo-text h3 {
+    color: #FFFFFF;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    margin: 0 0 8px 0;
+}
+
+.logo-text p {
+    color: #E6E6FF;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.logo-text p:last-child {
+    color: #FFFFFF;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/*====================================================
+  SIDEBAR MENU
+====================================================*/
+
+.sidebar ul {
+    width: 100%;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    font-size: 15px;
+
+    color: #FFFFFF;
+}
+
+.sidebar ul li:hover {
+    background: #CCCCFF;
+
+    color: #000000;
+
+    transform: translateX(3px);
+}
+
+.sidebar ul li.active {
+    background: #FFFFFF;
+
+    color: #8A8AFF;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar ul li i {
+    font-size: 18px;
+
+    width: 22px;
+
+    text-align: center;
+}
+
+.logout-btn {
+    margin-top: 10px;
+}
+
+
+/*====================================================
+  MAIN CONTENT
+====================================================*/
+
+.main {
+    flex: 1;
+
+    padding: 30px;
+
+    min-width: 0;
+}
+
+
+/*====================================================
+  HEADER
+====================================================*/
+
+header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    gap: 25px;
+}
+
+header h1 {
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: #000000;
+}
+
+header p {
+    color: #555555;
+
+    margin-top: 8px;
+
+    font-size: 15px;
+}
+
+
+/*====================================================
+  HEADER PROFILE
+====================================================*/
+
+.profile-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #CCCCFF;
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    box-shadow: 0 6px 18px rgba(80, 80, 160, 0.12);
+
+    transition: all 0.3s ease;
+
+    flex-shrink: 0;
+}
+
+.profile-box:hover {
+    transform: translateY(-3px);
+}
+
+.profile-box img {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid #E6E6FF;
+}
+
+.profile-box h3 {
+    font-size: 16px;
+
+    color: #000000;
+}
+
+.profile-box span {
+    font-size: 13px;
+
+    color: #555555;
+}
+
+
+/*====================================================
+  STUDENT CARD
+====================================================*/
+
+.student-card {
+    background: #FFFFFF;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    border: 1px solid rgba(138, 138, 255, 0.15);
+
+    box-shadow: 0 10px 30px rgba(80, 80, 160, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 35px rgba(80, 80, 160, 0.17);
+}
+
+.student-card > img {
+    width: 105px;
+    height: 105px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #E6E6FF;
+
+    box-shadow: 0 6px 18px rgba(80, 80, 160, 0.15);
+
+    flex-shrink: 0;
+}
+
+
+/*====================================================
+  STUDENT INFORMATION
+====================================================*/
+
+.student-info {
+    min-width: 0;
+}
+
+.student-info h2 {
+    color: #000000;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.student-info p {
+    color: #555555;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.student-info strong {
+    color: #333333;
+
+    font-weight: 600;
+}
+
+
+/*====================================================
+  DAY CARD
+====================================================*/
+
+.day-card {
+    background: #FFFFFF;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(138, 138, 255, 0.15);
+
+    box-shadow: 0 10px 30px rgba(80, 80, 160, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+.day-card:hover {
+    box-shadow: 0 15px 35px rgba(80, 80, 160, 0.17);
+}
+
+
+/*====================================================
+  DAY HEADING
+====================================================*/
+
+.day-card h2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #000000;
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.day-card h2 i {
+    color: #8A8AFF;
+
+    font-size: 21px;
+}
+
+
+/*====================================================
+  PERIOD
+====================================================*/
+
+.period {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #E6E6FF;
+
+    padding: 15px 18px;
+
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(138, 138, 255, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+.period:last-child {
+    margin-bottom: 0;
+}
+
+.period:hover {
+    background: #CCCCFF;
+
+    transform: translateX(4px);
+
+    box-shadow: 0 6px 15px rgba(80, 80, 160, 0.12);
+}
+
+
+/*====================================================
+  PERIOD TIME
+====================================================*/
+
+.period span {
+    color: #555555;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    min-width: 120px;
+}
+
+
+/*====================================================
+  PERIOD SUBJECT
+====================================================*/
+
+.period strong {
+    color: #000000;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: right;
+
+    flex: 1;
+}
+
+
+/*====================================================
+  BREAK PERIOD
+====================================================*/
+
+.period.break {
+    background: #FFF2CC;
+
+    border: 1px solid rgba(168, 117, 0, 0.15);
+}
+
+.period.break span {
+    color: #A87500;
+}
+
+.period.break strong {
+    color: #A87500;
+}
+
+.period.break:hover {
+    background: #FFE9A8;
+}
+
+
+/*====================================================
+  BUTTON SECTION
+====================================================*/
+
+.button-section {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+}
+
+.button-section button {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+/*====================================================
+  DOWNLOAD BUTTON
+====================================================*/
+
+.download-btn {
+    background: #8A8AFF;
+
+    color: #FFFFFF;
+
+    box-shadow: 0 7px 18px rgba(138, 138, 255, 0.20);
+}
+
+.download-btn:hover {
+    background: #333B42;
+
+    color: #FFFFFF;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 22px rgba(51, 59, 66, 0.18);
+}
+
+
+/*====================================================
+  PRINT BUTTON
+====================================================*/
+
+.print-btn {
+    background: #CCCCFF;
+
+    color: #8A8AFF;
+}
+
+.print-btn:hover {
+    background: #8A8AFF;
+
+    color: #FFFFFF;
+
+    transform: translateY(-3px);
+}
+
+
+/*====================================================
+  BACK BUTTON
+====================================================*/
+
+.back-btn {
+    background: #333B42;
+
+    color: #FFFFFF;
+}
+
+.back-btn:hover {
+    background: #8A8AFF;
+
+    color: #FFFFFF;
+
+    transform: translateY(-3px);
+}
+
+
+/*====================================================
+  SCROLLBAR
+====================================================*/
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #E6E6FF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B0B0F7;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #CCCCFF;
+}
+
+
+
+/*====================================================
+  RESPONSIVE DESIGN — DASHBOARD STYLE
+====================================================*/
+
+/*====================================================
+  TABLET / DRAWER
+====================================================*/
+@media (min-width: 768px) and (max-width: 950px) {
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        z-index: 1000;
+        margin: 0;
+        padding: 12px 22px;
+        background: #E6E6FF;
+        box-shadow: 0 4px 18px rgba(80, 80, 160, 0.10);
+    }
+
+    .main {
+        padding: 102px 22px 30px;
+        width: 100%;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100vh;
+        z-index: 1200;
+        transform: translateX(-105%);
+        transition: transform 0.3s ease;
+        box-shadow: 8px 0 30px rgba(80, 80, 160, 0.18);
+    }
+
+    .sidebar.sidebar-open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 1100;
+        background: rgba(0, 0, 0, 0.38);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        border-radius: 10px;
+        background: #8A8AFF;
+        color: #FFFFFF;
+        font-size: 18px;
+        box-shadow: 0 5px 14px rgba(80, 80, 160, 0.18);
+    }
+
+    header > div:first-of-type {
+        flex: 1;
+    }
+}
+
+/*====================================================
+  MOBILE
+====================================================*/
+@media (max-width: 767px) {
+
+    body.sidebar-is-open {
+        overflow: hidden;
+    }
+
+    .container {
+        display: block;
+        min-height: 100vh;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        z-index: 1000;
+        margin: 0;
+        padding: 7px 14px;
+        gap: 10px;
+        background: #E6E6FF;
+        box-shadow: 0 4px 18px rgba(80, 80, 160, 0.10);
+    }
+
+    .main {
+        width: 100%;
+        padding: 82px 18px 25px;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(310px, 86vw);
+        height: 100vh;
+        z-index: 1200;
+        padding: 25px;
+        transform: translateX(-105%);
+        transition: transform 0.3s ease;
+        box-shadow: 8px 0 30px rgba(80, 80, 160, 0.18);
+        overflow-y: auto;
+    }
+
+    .sidebar.sidebar-open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 1100;
+        background: rgba(0, 0, 0, 0.38);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        padding: 0;
+        border-radius: 10px;
+        background: #8A8AFF;
+        color: #FFFFFF;
+        font-size: 18px;
+        box-shadow: 0 5px 14px rgba(80, 80, 160, 0.18);
+        transition: all 0.25s ease;
+    }
+
+    .mobile-menu-toggle:hover {
+        transform: translateY(-1px);
+    }
+
+    header > div:first-of-type {
+        flex: 1;
+        min-width: 0;
+    }
+
+    header h1 {
+        font-size: 22px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    header p {
+        margin-top: 3px;
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .profile-box {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        gap: 0;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .profile-box img {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #E6E6FF;
+    }
+
+    .profile-box > div {
+        display: none;
+    }
+
+    .student-card {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .student-card > img {
+        width: 95px;
+        height: 95px;
+    }
+
+    .student-info {
+        width: 100%;
+    }
+
+    .student-info h2 {
+        font-size: 22px;
+    }
+
+    .student-info p {
+        font-size: 13px;
+    }
+
+    .day-card {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .day-card h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .period {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 13px 15px;
+    }
+
+    .period span {
+        min-width: 0;
+        font-size: 12px;
+    }
+
+    .period strong {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .button-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button-section button {
+        width: 100%;
+    }
+}
+
+/*====================================================
+  SMALL MOBILE
+====================================================*/
+@media (max-width: 420px) {
+
+    header {
+        padding: 7px 8px 7px 12px;
+        gap: 8px;
+    }
+
+    .mobile-menu-toggle {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+        border-radius: 9px;
+        font-size: 17px;
+    }
+
+    .profile-box,
+    .profile-box img {
+        width: 37px;
+        height: 37px;
+    }
+
+    header h1 {
+        font-size: 17px;
+    }
+
+    header p {
+        font-size: 10px;
+    }
+
+    .main {
+        padding: 78px 14px 22px;
+    }
+
+    .student-card {
+        padding: 18px;
+    }
+
+    .student-card > img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .student-info h2 {
+        font-size: 20px;
+    }
+
+    .student-info p {
+        font-size: 12px;
+    }
+
+    .day-card {
+        padding: 15px;
+    }
+
+    .day-card h2 {
+        font-size: 19px;
+    }
+
+    .period {
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .period span {
+        font-size: 11px;
+    }
+
+    .period strong {
+        font-size: 13px;
+    }
+
+    .button-section button {
+        padding: 11px 15px;
+        font-size: 13px;
+    }
+}
+
+/*====================================================
+  DESKTOP
+====================================================*/
+.mobile-menu-toggle,
+.sidebar-overlay {
+    display: none;
+}
+
+/* Restore drawer elements on tablet/mobile */
+@media (min-width: 768px) and (max-width: 950px),
+       (max-width: 767px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .sidebar-overlay {
+        display: block;
+    }
+}
+
+/*====================================================
+  PRINT
+====================================================*/
+@media print {
+
+    .sidebar,
+    .button-section,
+    .mobile-menu-toggle,
+    .sidebar-overlay {
+        display: none !important;
+    }
+
+    .main {
+        padding: 0;
+        width: 100%;
+    }
+
+    body {
+        background: #FFFFFF;
+    }
+
+    .student-card,
+    .day-card {
+        box-shadow: none;
+        border: 1px solid #DDDDDD;
+        break-inside: avoid;
+    }
+}
