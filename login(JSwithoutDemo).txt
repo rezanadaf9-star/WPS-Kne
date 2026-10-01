@@ -1,0 +1,67 @@
+/* =========================================================
+   LOGIN
+   ========================================================= */
+
+loginForm.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
+
+
+        loginMessage.textContent = "";
+
+        loginMessage.className =
+            "login-message";
+
+
+        /* -------------------------------------
+           Validate
+           ------------------------------------- */
+
+        if (!validateForm()) {
+
+            return;
+
+        }
+
+
+        /* -------------------------------------
+           Loading
+           ------------------------------------- */
+
+        loginButton.classList.add(
+            "loading"
+        );
+
+        loginButton.disabled = true;
+
+
+        /*
+         * FRONT-END DEMO
+         *
+         * Replace this section later with
+         * your real backend authentication.
+         */
+
+        setTimeout(function () {
+
+            loginButton.classList.remove(
+                "loading"
+            );
+
+            loginButton.disabled = false;
+
+
+            loginMessage.textContent =
+                `${portalData[currentPortal].name} is ready to connect.`;
+
+            loginMessage.classList.add(
+                "success"
+            );
+
+
+        }, 1000);
+
+    }
+);

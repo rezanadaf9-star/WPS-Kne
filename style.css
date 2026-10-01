@@ -1,0 +1,1327 @@
+/* =========================================================
+   WELCOME PUBLIC SCHOOL
+   MODERN LIQUID GLASS LOGIN
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: #FFFFFF;
+
+    overflow-x: hidden;
+
+    background: #333B42;
+}
+
+
+
+/* =========================================================
+   BACKGROUND VIDEO
+   ========================================================= */
+
+.background-video {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -5;
+}
+
+
+
+/* =========================================================
+   VIDEO OVERLAY
+   ========================================================= */
+
+.video-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -4;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 20, 45, 0.70),
+            rgba(75, 75, 130, 0.42),
+            rgba(20, 20, 45, 0.68)
+        );
+
+    backdrop-filter: blur(2px);
+}
+
+
+
+/* =========================================================
+   AMBIENT LIGHTS
+   ========================================================= */
+
+.ambient-light {
+    position: fixed;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -3;
+
+    filter: blur(70px);
+}
+
+.light-one {
+    width: 350px;
+    height: 350px;
+
+    top: -130px;
+    left: -100px;
+
+    background: rgba(138, 138, 255, 0.35);
+}
+
+.light-two {
+    width: 300px;
+    height: 300px;
+
+    right: -100px;
+    bottom: -100px;
+
+    background: rgba(204, 204, 255, 0.25);
+}
+
+
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.login-page {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px 20px;
+
+}
+
+
+
+/* =========================================================
+   SCHOOL BRANDING
+   NO BACKGROUND
+   NO CARD
+   ========================================================= */
+
+.school-branding {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin: 0 auto 25px;
+    margin-bottom: 20px;
+
+    position: relative;
+    z-index: 5;
+
+    text-align: left;
+
+    color: #ffffff;
+}
+
+@keyframes brandingAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-wrapper {
+
+    width: 105px;
+    height: 105px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.30);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.22),
+
+        inset 0 0 25px
+        rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(12px);
+
+    transition: 0.35s ease;
+}
+
+.logo-wrapper:hover {
+
+    transform: translateY(-5px) scale(1.03);
+
+    background: rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.28);
+}
+
+.school-logo {
+
+    width: 82px;
+    height: 82px;
+
+    object-fit: contain;
+}
+
+
+
+/* =========================================================
+   SCHOOL NAME
+   ========================================================= */
+
+.school-name h1 {
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #FFFFFF;
+
+    text-shadow:
+        0 3px 18px rgba(0, 0, 0, 0.35);
+}
+
+.school-name h2 {
+
+    margin-top: 5px;
+
+    font-size: 19px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #CCCCFF;
+
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.30);
+}
+
+
+
+/* =========================================================
+   SCHOOL INFO
+   ========================================================= */
+
+.school-line {
+
+    width: 55px;
+    height: 2px;
+
+    margin: 12px auto 8px;
+
+    border-radius: 20px;
+
+    background: #FFFFFF;
+
+    opacity: 0.7;
+}
+
+.established {
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    color: #FFFFFF;
+
+    opacity: 0.9;
+}
+
+.location {
+
+    margin-top: 3px;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    color: #CCCCFF;
+
+    opacity: 0.85;
+}
+
+
+
+/* =========================================================
+   LOGIN SECTION
+   ========================================================= */
+
+.login-section {
+
+    width: 100%;
+
+    max-width: 455px;
+
+    animation: cardAppear 0.8s 0.1s ease both;
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+
+/* =========================================================
+   LIQUID GLASS LOGIN CARD
+   ========================================================= */
+
+.login-card {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 20px 34px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.22),
+            rgba(255, 255, 255, 0.09)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.38);
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(0, 0, 0, 0.35),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.45),
+
+        inset 0 -1px 0
+        rgba(255, 255, 255, 0.08);
+
+    backdrop-filter:
+        blur(25px)
+        saturate(150%);
+
+    -webkit-backdrop-filter:
+        blur(25px)
+        saturate(150%);
+
+    transition: 0.35s ease;
+}
+
+.login-card:hover {
+
+    border-color:
+        rgba(255, 255, 255, 0.50);
+
+    box-shadow:
+
+        0 35px 90px
+        rgba(0, 0, 0, 0.40),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.50);
+}
+
+
+
+/* =========================================================
+   GLASS SHINE
+   ========================================================= */
+
+.glass-shine {
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -190px;
+    right: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.22),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+
+/* =========================================================
+   LOGIN HEADER
+   ========================================================= */
+
+.login-header {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+}
+
+.login-icon {
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 16px;
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(138, 138, 255, 0.90),
+            rgba(138, 138, 255, 0.55)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.35);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.16),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.35);
+}
+
+.login-icon i {
+    font-size: 21px;
+}
+
+.login-header h2 {
+
+    font-size: 24px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    color: #FFFFFF;
+
+    text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.login-header p {
+
+    margin-top: 2px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #CCCCFF;
+}
+
+
+
+/* =========================================================
+   PORTAL STATUS
+   ========================================================= */
+
+.portal-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 8px 14px;
+
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(10, 159, 61, 0.13);
+
+    border:
+        1px solid rgba(10, 159, 61, 0.30);
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.15);
+
+    transition: 0.3s ease;
+}
+
+.status-dot {
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+
+    background: #35D46B;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(53, 212, 107, 0.13);
+
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0
+            rgba(53, 212, 107, 0.35);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 7px
+            rgba(53, 212, 107, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0
+            rgba(53, 212, 107, 0);
+    }
+
+}
+
+.status-text {
+
+    flex: 1;
+}
+
+.status-text span {
+
+    display: block;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.status-text strong {
+
+    display: block;
+
+    margin-top: 1px;
+
+    font-size: 12px;
+
+    color: #55E47D;
+
+    font-weight: 700;
+}
+
+#statusIcon {
+
+    color: #55E47D;
+
+    font-size: 15px;
+}
+
+
+
+/* =========================================================
+   INPUT GROUP
+   ========================================================= */
+
+.input-group {
+
+    margin-bottom: 12px;
+}
+
+.input-group label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #FFFFFF;
+}
+
+.input-group label i {
+
+    color: #CCCCFF;
+}
+
+
+
+/* =========================================================
+   INPUT BOX
+   ========================================================= */
+
+.input-box {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.input-box > i {
+
+    position: absolute;
+
+    left: 15px;
+
+    color: #CCCCFF;
+
+    font-size: 13px;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.input-box input {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding:
+        0 46px
+        0 43px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    outline: none;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.11);
+
+    color: #FFFFFF;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    transition: 0.25s ease;
+
+    backdrop-filter: blur(10px);
+}
+
+.input-box input::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.58);
+}
+
+.input-box input:focus {
+
+    border-color:
+        rgba(255, 255, 255, 0.65);
+
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(138, 138, 255, 0.18);
+}
+
+
+
+/* =========================================================
+   PASSWORD BUTTON
+   ========================================================= */
+
+.password-toggle {
+
+    position: absolute;
+
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.password-toggle:hover {
+
+    color: #FFFFFF;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+}
+
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.error {
+
+    display: block;
+
+    min-height: 14px;
+
+    margin-top: 4px;
+
+    font-size: 9px;
+
+    color: #FF8E8E;
+}
+
+
+
+/* =========================================================
+   INVALID INPUT
+   ========================================================= */
+
+.input-box input.invalid {
+
+    border-color:
+        rgba(255, 80, 80, 0.75);
+
+    background:
+        rgba(255, 50, 50, 0.08);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255, 70, 70, 0.10);
+}
+
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-button {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 2px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    color: #FFFFFF;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8A8AFF,
+            #6F6FE5
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.30);
+
+    box-shadow:
+        0 12px 25px
+        rgba(70, 70, 170, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.login-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 17px 30px
+        rgba(70, 70, 170, 0.45);
+}
+
+.login-button:active {
+
+    transform: translateY(0);
+}
+
+.login-button > i {
+
+    transition: 0.3s ease;
+}
+
+.login-button:hover > i {
+
+    transform: translateX(4px);
+}
+
+
+
+/* =========================================================
+   LOADER
+   ========================================================= */
+
+.loader {
+
+    display: none;
+
+    width: 18px;
+    height: 18px;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.40);
+
+    border-top-color: #FFFFFF;
+
+    border-radius: 50%;
+
+    animation: spin 0.7s linear infinite;
+}
+
+.login-button.loading .button-text,
+.login-button.loading > i {
+
+    display: none;
+}
+
+.login-button.loading .loader {
+
+    display: block;
+}
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+
+/* =========================================================
+   PORTAL SELECTOR
+   ========================================================= */
+
+.portal-selector {
+
+    margin-top: 24px;
+
+    text-align: center;
+}
+
+.selector-label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 9px;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+}
+
+.portal-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+}
+
+.portal-button {
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.22);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+
+    transition: 0.25s ease;
+}
+
+.portal-button:hover {
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+}
+
+.portal-button.active {
+
+   background:
+        linear-gradient(
+            135deg,
+            #8A8AFF,
+            #6F6FE5
+        );
+    border-color:
+        rgba(255, 255, 255, 0.40);
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 8px 20px
+        rgba(80, 80, 180, 0.28);
+}
+
+
+
+/* =========================================================
+   TEACHER MODE
+   ========================================================= */
+
+.login-card.teacher-mode
+.portal-status {
+
+    background:
+        rgba(138, 138, 255, 0.15);
+
+    border-color:
+        rgba(204, 204, 255, 0.35);
+}
+
+.login-card.teacher-mode
+.status-dot {
+
+    background: #CCCCFF;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(204, 204, 255, 0.13);
+}
+
+.login-card.teacher-mode
+.status-text strong {
+
+    color: #CCCCFF;
+}
+
+.login-card.teacher-mode
+#statusIcon {
+
+    color: #CCCCFF;
+}
+
+
+
+/* =========================================================
+   LOGIN MESSAGE
+   ========================================================= */
+
+.login-message {
+
+    min-height: 17px;
+
+    margin-top: 12px;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+.login-message.success {
+
+    color: #55E47D;
+}
+
+.login-message.error {
+
+    color: #FF8E8E;
+}
+
+
+
+/* =========================================================
+   SECURITY
+   ========================================================= */
+
+.security {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 15px;
+
+    color:
+        rgba(255, 255, 255, 0.50);
+
+    font-size: 8px;
+}
+
+.security i {
+
+    color: #55E47D;
+
+    font-size: 10px;
+}
+
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.copyright {
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 8px;
+
+    color:
+        rgba(255, 255, 255, 0.62);
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .login-page {
+
+        padding:
+            25px 15px;
+    }
+
+    .school-branding {
+
+        margin-bottom: 20px;
+    }
+
+    .logo-wrapper {
+
+        width: 88px;
+        height: 88px;
+    }
+
+    .school-logo {
+
+        width: 68px;
+        height: 68px;
+    }
+
+    .school-name h1 {
+
+        font-size: 23px;
+    }
+
+    .school-name h2 {
+
+        font-size: 17px;
+    }
+
+    .login-card {
+
+        padding: 27px 21px;
+
+        border-radius: 24px;
+    }
+
+    .login-header h2 {
+
+        font-size: 21px;
+    }
+
+}
+
+
+
+@media (max-width: 420px) {
+
+    .login-page {
+
+        padding:
+            20px 12px;
+    }
+
+    .logo-wrapper {
+
+        width: 78px;
+        height: 78px;
+    }
+
+    .school-logo {
+
+        width: 60px;
+        height: 60px;
+    }
+
+    .school-name h1 {
+
+        font-size: 20px;
+    }
+
+    .school-name h2 {
+
+        font-size: 15px;
+    }
+
+    .location {
+
+        font-size: 8px;
+    }
+
+    .login-card {
+
+        padding: 23px 17px;
+
+        border-radius: 21px;
+    }
+
+    .login-icon {
+
+        width: 48px;
+        height: 48px;
+    }
+
+    .login-header h2 {
+
+        font-size: 19px;
+    }
+
+    .login-header p {
+
+        font-size: 14px;
+    }
+
+    .input-box input {
+
+        height: 49px;
+    }
+
+    .login-button {
+
+        height: 50px;
+    }
+
+}
+
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+input:focus-visible {
+
+    outline:
+        2px solid
+        rgba(255, 255, 255, 0.65);
+
+    outline-offset: 2px;
+}
+
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
