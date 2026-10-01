@@ -1,0 +1,1889 @@
+/* =========================================================
+   ATTENDANCE PAGE
+   WELCOME PUBLIC SCHOOL
+   Same Theme & Layout as style.css
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #E6E6FF;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   Same as style.css
+   ========================================================= */
+
+.sidebar {
+    width: 300px;
+
+    background: #8A8AFF;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    position: sticky;
+    top: 0;
+
+    flex-shrink: 0;
+
+    box-shadow: 8px 0 30px rgba(80, 80, 160, 0.18);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.logo img {
+    width: 130px;
+    height: 130px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+.logo-text {
+    text-align: center;
+}
+
+.logo-text h2 {
+    color: #fff;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.logo-text h3 {
+    color: #fff;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.logo-text p {
+    color: #E6E6FF;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    margin: 10px;
+}
+
+.logo-text p:last-child {
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+   ========================================================= */
+
+.sidebar ul {
+    width: 100%;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 18px;
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+.sidebar li:hover {
+    background: #CCCCFF;
+    color: #000;
+
+    transform: translateX(3px);
+}
+
+.sidebar li.active {
+    background: #fff;
+    color: #8A8AFF;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar li i {
+    width: 22px;
+    min-width: 22px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+.logout-btn {
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   SIDEBAR SCROLLBAR
+   ========================================================= */
+
+.sidebar::-webkit-scrollbar {
+    width: 7px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #E6E6FF;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #B0B0F7;
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #CCCCFF;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main {
+    flex: 1;
+
+    padding: 30px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #000;
+
+    font-size: 34px;
+    font-weight: 700;
+}
+
+header > div:first-child p {
+    color: #555;
+
+    font-size: 15px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   PROFILE BOX
+   ========================================================= */
+
+.profile-box {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    background: #CCCCFF;
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    box-shadow: 0 6px 18px rgba(80, 80, 160, 0.12);
+
+    transition: all 0.25s ease;
+
+    flex-shrink: 0;
+    border: 1px solid #c2c2fd;
+}
+
+.profile-box:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 22px rgba(80, 80, 160, 0.16);
+}
+
+.profile-box img {
+    width: 52px;
+    height: 52px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #ffffff;
+}
+
+.profile-box h3 {
+    color: #000;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.profile-box span {
+    display: block;
+
+    color: #555;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   STUDENT ATTENDANCE CARD
+   ========================================================= */
+
+.attendance-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: #fff;
+
+    padding: 28px 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(251, 251, 252, 0.15);
+
+    box-shadow: 0 10px 30px rgba(80, 80, 160, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+.attendance-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 14px 32px rgba(80, 80, 160, 0.16);
+}
+
+
+/* =========================================================
+   STUDENT INFO
+   ========================================================= */
+
+.student-info {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+.student-info > img {
+    width: 105px;
+    height: 105px;
+
+    object-fit: cover;
+
+    border-radius: 54px;
+
+    border: 5px solid #bbbbf4;
+
+    box-shadow: 0 6px 18px rgba(80, 80, 160, 0.15);
+
+    flex-shrink: 0;
+}
+
+.student-info h2 {
+    color: #333B42;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.student-info p {
+    color: #555;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Attendance Percentage
+========================= */
+
+.attendance-percentage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    --progress: 0%;
+
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    /* Animated circular arc */
+    background: conic-gradient(
+        #8A8AFF var(--progress),
+        #e8e8f8 var(--progress)
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    transition: background 0.05s linear;
+
+    box-shadow: 0 5px 15px rgba(138, 138, 255, 0.12);
+}
+
+/* White center of the circle */
+.circle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 88px;
+    height: 88px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+}
+
+/* Percentage text */
+.circle h2 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #8A8AFF;
+}
+
+.attendance-percentage > p {
+    margin-top: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   SUMMARY SECTION
+   ========================================================= */
+
+.summary-section {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.summary-card {
+    background: #fff;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(251, 251, 252, 0.15);
+
+    box-shadow: 0 8px 25px rgba(80, 80, 160, 0.10);
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    background-color: #fafafa;
+
+    box-shadow: 0 12px 30px rgba(80, 80, 160, 0.16);
+}
+
+.summary-card i {
+    width: 48px;
+    height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #E6E6FF;
+
+    color: #8A8AFF;
+
+    border-radius: 14px;
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.summary-card h3 {
+    color: #333B42;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 4px;
+}
+
+.summary-card p {
+    color: #555;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   INDIVIDUAL SUMMARY COLORS
+   ========================================================= */
+
+.summary-card:nth-child(1) i {
+    color: #0A9F3D;
+    background: #E7F7ED;
+}
+
+.summary-card:nth-child(2) i {
+    color: #D93636;
+    background: #FCEAEA;
+}
+
+.summary-card:nth-child(3) i {
+    color: #A87500;
+    background: #FFF4D6;
+}
+
+.summary-card:nth-child(4) i {
+    color: #8A8AFF;
+    background: #E6E6FF;
+}
+
+
+/* =========================================================
+   CALENDAR SECTION
+   ========================================================= */
+
+.calendar-section {
+    background: #fff;
+
+    padding: 25px;
+
+    margin-bottom: 22px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgb(254, 254, 255);
+
+    box-shadow: 0 8px 25px rgba(80, 80, 160, 0.10);
+}
+
+.calendar-section h2 {
+    color: #333B42;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CALENDAR TABLE
+   ========================================================= */
+
+.calendar-section table {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 7px;
+
+    table-layout: fixed;
+}
+
+.calendar-section th {
+    background: #8A8AFF;
+    color: #fff;
+
+    padding: 12px 8px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.calendar-section td {
+    height: 55px;
+
+    padding: 8px;
+
+    border-radius: 10px;
+
+    background: #F5F5FF;
+
+    color: #333B42;
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+
+/* =========================================================
+   CALENDAR STATUS COLORS
+   ========================================================= */
+
+.calendar-section td.present {
+    background: #E7F7ED;
+    color: #0A9F3D;
+        border: 1px solid #d6f5e2;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.calendar-section td.present:hover {
+  background-color: #1cae4f;
+  color: white;
+}
+
+
+.calendar-section td.absent {
+    background: #FCEAEA;
+    color: #D93636;
+    border: 1px solid #fbe1e1;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.calendar-section td.absent:hover {
+  background-color: #fa4343;
+  color: white;
+}
+
+.calendar-section td.leave {
+    background: #FFF4D6;
+    color: #A87500;
+    border: 1px solid #fbeecd;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.calendar-section td.leave:hover {
+  background-color: #d7a93f;
+  color: white;
+}
+
+.calendar-section td.holiday {
+    background: #E9E9E9;
+    color: #9f9898;
+    border: 1px solid #e5e4e4;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.calendar-section td.holiday:hover {
+  background-color: #979696;
+  color:white;
+}
+
+
+/* =========================================================
+   LEGEND SECTION
+   ========================================================= */
+
+.legend-section {
+    background: #fff;
+
+    padding: 22px 25px;
+
+    margin-bottom: 22px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgb(254, 254, 254);
+
+    box-shadow: 0 8px 25px rgba(80, 80, 160, 0.10);
+}
+
+.legend-section h2 {
+    color: #333B42;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-bottom: 17px;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.legend-item .box {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 5px;
+
+    display: inline-block;
+}
+
+.legend-item p {
+    color: #555;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   LEGEND COLORS
+   ========================================================= */
+
+.box.green {
+    background: #0A9F3D;
+}
+
+.box.red {
+    background: #D93636;
+}
+
+.box.yellow {
+    background: #E7B62D;
+}
+
+.box.grey {
+    background: #A8A8A8;
+}
+
+
+/* =========================================================
+   BUTTON SECTION
+   ========================================================= */
+
+.button-section {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.button-section button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON
+   ========================================================= */
+
+.download-btn {
+    background: #8A8AFF;
+    color: #fff;
+}
+
+.download-btn:hover {
+    background: #7373F2;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 16px rgba(138, 138, 255, 0.30);
+}
+
+
+/* =========================================================
+   PRINT BUTTON
+   ========================================================= */
+
+.print-btn {
+    background: #CCCCFF;
+    color: #333B42;
+}
+
+.print-btn:hover {
+    background: #B8B8FA;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-btn {
+    background: #333B42;
+    color: #fff;
+}
+
+.back-btn:hover {
+    background: #22282D;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 16px rgba(51, 59, 66, 0.20);
+}
+
+
+/* =========================================================
+   1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .summary-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .attendance-card {
+        padding: 25px;
+    }
+}
+
+
+/* =========================================================
+   950px
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .sidebar {
+        width: 220px;
+        padding: 18px;
+    }
+
+    .logo {
+        margin-bottom: 28px;
+    }
+
+    .logo img {
+        width: 105px;
+        height: 105px;
+    }
+
+    .logo-text h2 {
+        font-size: 22px;
+    }
+
+    .logo-text h3 {
+        font-size: 17px;
+    }
+
+    .logo-text p {
+        font-size: 10px;
+    }
+
+    .logo-text p:last-child {
+        font-size: 14px;
+    }
+
+    .sidebar li {
+        padding: 12px 13px;
+
+        font-size: 14px;
+
+        gap: 12px;
+    }
+
+    .sidebar li i {
+        font-size: 16px;
+    }
+
+    .main {
+        padding: 22px;
+    }
+
+    header h1 {
+        font-size: 24px;
+        white-space: nowrap;
+    }
+
+    .desktop-attendance-title {
+        display: none;
+    }
+
+    .compact-attendance-title {
+        display: inline;
+    }
+
+    header > div:first-child p {
+        display: none;
+    }
+
+    .profile-box {
+        margin: 4px 0;
+        padding: 5px 10px;
+        gap: 7px;
+    }
+
+    .profile-box img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .profile-box h3 {
+        font-size: 14px;
+        line-height: 1.1;
+        margin: 0 0 1px;
+    }
+
+    .profile-box span {
+        font-size: 11px;
+        line-height: 1.1;
+    }
+
+    header > div:first-child p {
+        font-size: 14px;
+    }
+
+    .attendance-card {
+        padding: 22px;
+
+        gap: 20px;
+    }
+
+    .student-info {
+        gap: 16px;
+    }
+
+    .student-info > img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .student-info h2 {
+        font-size: 21px;
+    }
+
+    .student-info p {
+        font-size: 12px;
+    }
+
+    .circle {
+        width: 105px;
+        height: 105px;
+    }
+
+    .circle h2 {
+        font-size: 24px;
+    }
+
+    .calendar-section,
+    .legend-section {
+        padding: 22px;
+    }
+
+    .calendar-section h2,
+    .legend-section h2 {
+        font-size: 19px;
+    }
+
+    .calendar-section td {
+        height: 50px;
+    }
+}
+
+
+/* =========================================================
+   700px
+   Same responsive sidebar behavior as style.css
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        padding: 15px;
+
+        box-shadow: none;
+
+        overflow: visible;
+    }
+
+    .logo {
+        margin: 20px 0;
+    }
+
+    .logo img {
+        width: 85px;
+        height: 85px;
+
+        margin-bottom: 10px;
+    }
+
+    .logo-text h2 {
+        font-size: 20px;
+    }
+
+    .logo-text h3 {
+        font-size: 16px;
+    }
+
+    .logo-text p {
+        font-size: 8px;
+
+        margin: 6px;
+    }
+
+    .logo-text p:last-child {
+        font-size: 12px;
+    }
+
+    .sidebar ul {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+    .sidebar li {
+        margin-bottom: 0;
+
+        padding: 11px;
+
+        font-size: 13px;
+
+        gap: 9px;
+    }
+
+    .sidebar li i {
+        font-size: 15px;
+    }
+
+    .logout-btn {
+        margin-top: 0;
+    }
+
+    .main {
+        padding: 18px;
+    }
+
+    header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-bottom: 25px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header > div:first-child p {
+        font-size: 13px;
+    }
+
+    .profile-box {
+        width: 100%;
+
+        border-radius: 18px;
+
+        padding: 8px 14px;
+    }
+
+    /* Attendance Card */
+
+    .attendance-card {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        padding: 22px;
+
+        gap: 22px;
+    }
+
+    .student-info {
+        flex-direction: column;
+
+        gap: 12px;
+
+        width: 100%;
+    }
+
+    .student-info > img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .student-info h2 {
+        font-size: 21px;
+    }
+
+    .student-info p {
+        font-size: 12px;
+    }
+
+    .attendance-percentage {
+        width: 100%;
+    }
+
+    .circle {
+        width: 115px;
+        height: 115px;
+    }
+
+    .circle h2 {
+        font-size: 25px;
+    }
+
+    /* Summary */
+
+    .summary-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .summary-card {
+        padding: 18px;
+    }
+
+    .summary-card i {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+    .summary-card h3 {
+        font-size: 14px;
+    }
+
+    .summary-card p {
+        font-size: 12px;
+    }
+
+    /* Calendar */
+
+    .calendar-section {
+        padding: 18px;
+
+        overflow-x: auto;
+    }
+
+    .calendar-section h2 {
+        font-size: 18px;
+    }
+
+    .calendar-section table {
+        min-width: 550px;
+
+        border-spacing: 5px;
+    }
+
+    .calendar-section th {
+        padding: 10px 6px;
+
+        font-size: 12px;
+    }
+
+    .calendar-section td {
+        height: 48px;
+
+        font-size: 12px;
+    }
+
+    /* Legend */
+
+    .legend-section {
+        padding: 18px;
+    }
+
+    .legend-section h2 {
+        font-size: 18px;
+    }
+
+    .legend {
+        gap: 14px;
+    }
+
+    .legend-item p {
+        font-size: 12px;
+    }
+
+    /* Buttons */
+
+    .button-section {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .button-section button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   450px
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .sidebar ul {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        padding: 14px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header > div:first-child p {
+        font-size: 12px;
+    }
+
+    .profile-box {
+        padding: 6px 10px;
+    }
+
+    .profile-box img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .profile-box h3 {
+        font-size: 13px;
+    }
+
+    .profile-box span {
+        font-size: 11px;
+    }
+
+    /* Attendance Card */
+
+    .attendance-card {
+        padding: 18px;
+
+        border-radius: 17px;
+    }
+
+    .student-info > img {
+        width: 88px;
+        height: 88px;
+
+        border-width: 4px;
+    }
+
+    .student-info h2 {
+        font-size: 19px;
+    }
+
+    .student-info p {
+        font-size: 11px;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .circle h2 {
+        font-size: 23px;
+    }
+
+    .attendance-percentage > p {
+        font-size: 11px;
+    }
+
+    /* Summary */
+
+    .summary-section {
+        gap: 10px;
+    }
+
+    .summary-card {
+        padding: 15px;
+
+        border-radius: 15px;
+    }
+
+    .summary-card i {
+        width: 38px;
+        height: 38px;
+
+        font-size: 16px;
+
+        border-radius: 11px;
+
+        margin-bottom: 9px;
+    }
+
+    .summary-card h3 {
+        font-size: 12px;
+    }
+
+    .summary-card p {
+        font-size: 11px;
+    }
+
+    /* Calendar */
+
+    .calendar-section {
+        padding: 15px;
+
+        border-radius: 17px;
+    }
+
+    .calendar-section h2 {
+        font-size: 17px;
+    }
+
+    .calendar-section table {
+        min-width: 500px;
+    }
+
+    .calendar-section th {
+        font-size: 11px;
+    }
+
+    .calendar-section td {
+        height: 43px;
+
+        font-size: 11px;
+    }
+
+    /* Legend */
+
+    .legend-section {
+        padding: 15px;
+
+        border-radius: 17px;
+    }
+
+    .legend-section h2 {
+        font-size: 16px;
+    }
+
+    .legend {
+        gap: 10px;
+    }
+
+    .legend-item {
+        gap: 6px;
+    }
+
+    .legend-item .box {
+        width: 15px;
+        height: 15px;
+    }
+
+    .legend-item p {
+        font-size: 11px;
+    }
+
+    /* Buttons */
+
+    .button-section button {
+        padding: 11px 15px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+    .sidebar {
+        display: none;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .main {
+        padding: 0;
+    }
+
+    .profile-box {
+        display: none;
+    }
+
+    .button-section {
+        display: none;
+    }
+
+    .attendance-card,
+    .summary-card,
+    .calendar-section,
+    .legend-section {
+        box-shadow: none;
+
+        border: 1px solid #ddd;
+    }
+
+    .attendance-card,
+    .summary-card,
+    .calendar-section,
+    .legend-section {
+        break-inside: avoid;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE HEADER TITLE
+   ========================================================= */
+
+.compact-attendance-title {
+    display: none;
+}
+
+/* =========================================================
+   RESPONSIVE NAVIGATION — MATCHES DASHBOARD / PROFILE / MARKS
+   ========================================================= */
+
+/* Hidden on desktop */
+.mobile-menu-toggle,
+.sidebar-overlay {
+    display: none;
+}
+
+/* Tablet: 768px–950px */
+@media (min-width: 768px) and (max-width: 950px) {
+
+    .container {
+        display: block;
+        min-height: 100vh;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        margin: 0;
+        padding: 0 25px;
+        background: #fff;
+        border-bottom: 1px solid rgb(226, 226, 226);
+        box-shadow: none;
+        z-index: 2000;
+    }
+
+    .mobile-menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+        padding: 0;
+        border: none;
+        border-radius: 10px;
+        background: #E6E6FF;
+        color: #8A8AFF;
+        font-size: 19px;
+        cursor: pointer;
+        box-shadow: none;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100vh;
+        padding: 25px;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        z-index: 3000;
+        box-shadow: none;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .sidebar.sidebar-open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+        position: fixed;
+        inset: 0;
+        display: block;
+        background: rgba(0, 0, 0, 0.28);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 1500;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .sidebar li:hover {
+        transform: none;
+    }
+
+    .main {
+        padding: 105px 25px 25px;
+    }
+
+    header > div:first-child {
+        min-width: 0;
+        flex: 1;
+    }
+
+    header h1 {
+        font-size: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+    .desktop-attendance-title {
+        display: none;
+    }
+
+    .compact-attendance-title {
+        display: inline;
+    }
+
+    header > div:first-child p {
+        display: none;
+    }
+
+    .profile-box {
+        margin: 4px 0;
+        padding: 5px 10px;
+        gap: 7px;
+    }
+
+    .profile-box img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .profile-box h3 {
+        font-size: 14px;
+        line-height: 1.1;
+        margin: 0 0 1px;
+    }
+
+    .profile-box span {
+        font-size: 11px;
+        line-height: 1.1;
+    }
+
+    .profile-box:hover,
+    .attendance-card:hover,
+    .summary-card:hover {
+        transform: none;
+    }
+}
+
+/* Mobile: below 768px */
+@media (max-width: 767px) {
+
+    .container {
+        display: block;
+        min-height: 100vh;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        margin: 0;
+        padding: 0 18px;
+        background: #fff;
+        border-bottom: 1px solid rgb(226, 226, 226);
+        box-shadow: none;
+        z-index: 2000;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .mobile-menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        padding: 0;
+        border: none;
+        border-radius: 10px;
+        background: #E6E6FF;
+        color: #8A8AFF;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: none;
+    }
+
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(300px, 86vw);
+        height: 100vh;
+        padding: 18px;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        z-index: 3000;
+        box-shadow: none;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .sidebar.sidebar-open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+        position: fixed;
+        inset: 0;
+        display: block;
+        background: rgba(0, 0, 0, 0.28);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 1500;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .sidebar li:hover {
+        transform: none;
+    }
+
+    .main {
+        padding: 78px 18px 18px;
+    }
+
+    header > div:first-child {
+        min-width: 0;
+        flex: 1;
+    }
+
+    header {
+        gap: 8px;
+    }
+
+    header h1 {
+        font-size: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+    .desktop-attendance-title {
+        display: none;
+    }
+
+    .compact-attendance-title {
+        display: inline;
+    }
+
+    header > div:first-child p {
+        display: none;
+    }
+
+    .profile-box {
+        width: auto;
+        margin: 4px 0;
+        padding: 4px 8px;
+        gap: 6px;
+        border-radius: 50px;
+    }
+
+    .profile-box img {
+        width: 36px;
+        height: 36px;
+        border-width: 2px;
+    }
+
+    .profile-box h3 {
+        font-size: 12px;
+        line-height: 1.05;
+        margin: 0 0 1px;
+    }
+
+    .profile-box span {
+        font-size: 10px;
+        line-height: 1.05;
+    }
+
+    .profile-box:hover {
+        transform: none;
+    }
+
+    .attendance-card:hover,
+    .summary-card:hover {
+        transform: none;
+    }
+}
+
+/* Touch devices: remove movement/hover effects */
+@media (max-width: 950px) and (hover: none) {
+
+    .sidebar li:hover,
+    .profile-box:hover,
+    .attendance-card:hover,
+    .summary-card:hover,
+    .calendar-section td:hover,
+    .download-btn:hover,
+    .print-btn:hover,
+    .back-btn:hover {
+        transform: none;
+    }
+
+    .calendar-section td.present:hover {
+        background-color: #E7F7ED;
+        color: #0A9F3D;
+    }
+
+    .calendar-section td.absent:hover {
+        background-color: #FCEAEA;
+        color: #D93636;
+    }
+
+    .calendar-section td.leave:hover {
+        background-color: #FFF4D6;
+        color: #A87500;
+    }
+
+    .calendar-section td.holiday:hover {
+        background-color: #E9E9E9;
+        color: #9f9898;
+    }
+}
+
+/* Desktop: hamburger must remain hidden */
+@media (min-width: 951px) {
+    .mobile-menu-toggle,
+    .sidebar-overlay {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE PROFILE-BOX SPACING
+   ========================================================= */
+
+@media (max-width: 950px) {
+    .profile-box h3 {
+        line-height: 1.15;
+        margin-bottom: 1px;
+    }
+
+    .profile-box span {
+        line-height: 1.15;
+    }
+}
+
+/* Compact mobile header: keep the title clean and on one line */
+@media (max-width: 640px) {
+    header > div:first-child p {
+        display: none;
+    }
+
+    header h1 {
+        font-size: clamp(18px, 5vw, 20px);
+        font-weight: 700;
+        line-height: 1.1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+    .desktop-attendance-title {
+        display: none;
+    }
+
+    .compact-attendance-title {
+        display: inline;
+    }
+}
+
+@media (max-width: 640px) {
+  header div p {
+      display: none;
+    }
+}

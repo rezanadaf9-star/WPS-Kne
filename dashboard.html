@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Student Dashboard
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"/>
+  <link href="dashboard.css" rel="stylesheet"/>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+ </head>
+ <body>
+  <div class="container">
+   <!-- ================= Sidebar ================= -->
+   <aside class="sidebar">
+    <div class="logo">
+     <img alt="School Logo" src="images/logo.png"/>
+     <div class="logo-text">
+      <h2>
+       WELCOME
+      </h2>
+      <h2>
+       PUBLIC SCHOOL
+      </h2>
+      <p class="school-info">
+       Established in 2002
+      </p>
+      <p class="school-info">
+       Darnea hat, Dist- Kishanganj
+      </p>
+      <p class="school-info state">
+       BIHAR
+      </p>
+     </div>
+    </div>
+    <ul>
+     <li class="active">
+      <i class="fa-solid fa-house">
+      </i>
+      Dashboard
+     </li>
+     <li onclick="window.location.href='profile.html'">
+      <i class="fa-solid fa-user">
+      </i>
+      My Profile
+     </li>
+     <li onclick="location.href='marks.html'">
+      <i class="fa-solid fa-chart-column">
+      </i>
+      <span>
+       My Marks
+      </span>
+     </li>
+     <li onclick="location.href='attendance.html'">
+      <i class="fa-solid fa-calendar-check">
+      </i>
+      <span>
+       Attendance
+      </span>
+     </li>
+     <li onclick="location.href='fees.html'">
+      <i class="fa-solid fa-indian-rupee-sign">
+      </i>
+      <span>
+       Fees
+      </span>
+     </li>
+     <li onclick="location.href='notices.html'">
+      <i class="fa-solid fa-bell">
+      </i>
+      <span>
+       Notices
+      </span>
+     </li>
+     <li onclick="location.href='timetable.html'">
+      <i class="fa-solid fa-clock">
+      </i>
+      <span>
+       Timetable
+      </span>
+     </li>
+     <li onclick="location.href='teachers.html'">
+      <i class="fa-solid fa-chalkboard-user">
+      </i>
+      Teachers
+     </li>
+     <li onclick="location.href='answer-sheet.html'">
+      <i class="fa-solid fa-file-pen">
+      </i>
+      Answer Sheets
+     </li>
+     <li onclick="location.href='results.html'">
+      <i class="fa-solid fa-poll-h">
+      </i>
+      Our Board Results
+     </li>
+     <li onclick="location.href='settings.html'">
+      <i class="fa-solid fa-gear">
+      </i>
+      <span>
+       Settings
+      </span>
+     </li>
+    </ul>
+    <div class="motivation">
+     <img src="images/trophy.png"/>
+     <h3>
+      Keep Learning,
+      <br/>
+      Keep Growing!
+     </h3>
+     <p>
+      You are capable of amazing things!
+     </p>
+    </div>
+   </aside>
+   <div aria-hidden="true" class="sidebar-overlay">
+   </div>
+   <!-- ================= Main Content ================= -->
+   <main class="main-content">
+    <!-- Header -->
+    <header>
+     <button aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-toggle" type="button">
+      <i class="fa-solid fa-bars">
+      </i>
+     </button>
+     <div>
+      <h1>
+       Good Morning, Md Jakariya 👋
+      </h1>
+      <p>
+       Class 10 • Roll No. 2
+      </p>
+     </div>
+     <div class="header-right">
+      <div class="notification">
+       <i class="fa-regular fa-bell">
+       </i>
+       <span>
+        3
+       </span>
+      </div>
+      <div class="profile">
+       <img src="images/student.jpg"/>
+       <div>
+        <h4>
+         Md Jakariya
+        </h4>
+        <p>
+         Student
+        </p>
+       </div>
+       <i class="fa-solid fa-chevron-down">
+       </i>
+      </div>
+     </div>
+    </header>
+    <!-- Welcome Banner -->
+    <section class="banner">
+     <div class="banner-text">
+      <h2>
+       Stay Positive, Work Hard
+      </h2>
+      <p>
+       Your hard work today will lead to a better tomorrow!
+      </p>
+     </div>
+     <img src="images/student-illustration.png"/>
+    </section>
+    <!-- Statistics -->
+    <section class="stats">
+     <div class="card">
+      <i class="fa-solid fa-chart-line">
+      </i>
+      <h3>
+       Overall Percentage
+      </h3>
+      <h2>
+       88.4%
+      </h2>
+      <p>
+       +5.6% from last term
+      </p>
+     </div>
+     <div class="card">
+      <i class="fa-solid fa-calendar-check">
+      </i>
+      <h3>
+       Attendance
+      </h3>
+      <h2>
+       92%
+      </h2>
+      <p>
+       Present this month
+      </p>
+     </div>
+     <div class="card">
+      <i class="fa-solid fa-trophy">
+      </i>
+      <h3>
+       Class Rank
+      </h3>
+      <h2>
+       5 / 42
+      </h2>
+      <p>
+       Keep it up!
+      </p>
+     </div>
+     <div class="card">
+      <i class="fa-solid fa-star">
+      </i>
+      <h3>
+       Total Marks
+      </h3>
+      <h2>
+       530 / 600
+      </h2>
+      <p>
+       Half Yearly
+      </p>
+     </div>
+    </section>
+    <!-- Middle -->
+    <section class="middle">
+     <!-- Marks -->
+     <div class="marks">
+      <div class="title">
+       <h2>
+        Subject Wise Marks
+       </h2>
+       <button onclick="location.href='marks.html'">
+        View All Marks
+       </button>
+      </div>
+      <table>
+       <tr>
+        <th>
+         Subject
+        </th>
+        <th>
+         Marks
+        </th>
+        <th>
+         Out Of
+        </th>
+        <th>
+         %
+        </th>
+        <th>
+         Grade
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Mathematics
+        </td>
+        <td>
+         95
+        </td>
+        <td>
+         100
+        </td>
+        <td>
+         95%
+        </td>
+        <td>
+         A+
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Science
+        </td>
+        <td>
+         92
+        </td>
+        <td>
+         100
+        </td>
+        <td>
+         92%
+        </td>
+        <td>
+         A+
+        </td>
+       </tr>
+       <tr>
+        <td>
+         English
+        </td>
+        <td>
+         89
+        </td>
+        <td>
+         100
+        </td>
+        <td>
+         89%
+        </td>
+        <td>
+         A
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Social Science
+        </td>
+        <td>
+         87
+        </td>
+        <td>
+         100
+        </td>
+        <td>
+         87%
+        </td>
+        <td>
+         A
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Hindi
+        </td>
+        <td>
+         88
+        </td>
+        <td>
+         100
+        </td>
+        <td>
+         88%
+        </td>
+        <td>
+         A
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Computer
+        </td>
+        <td>
+         79
+        </td>
+        <td>
+         100
+        </td>
+        <td>
+         79%
+        </td>
+        <td>
+         B+
+        </td>
+       </tr>
+      </table>
+     </div>
+     <!-- Right Panel -->
+     <div class="right-panel">
+      <div class="attendance">
+       <div class="title">
+        <h2>
+         Today's Attendance
+        </h2>
+        <button onclick="location.href='attendance.html'">
+         View Calendar
+        </button>
+       </div>
+       <h1>
+        92%
+       </h1>
+       <p>
+        Present
+       </p>
+       <div class="progress">
+        <div class="bar">
+        </div>
+       </div>
+      </div>
+      <div class="quick-links">
+       <h2>
+        Quick Links
+       </h2>
+       <div class="links">
+        <div onclick="location.href='marks.html'">
+         <i class="fa-solid fa-file">
+         </i>
+         <span>
+          My Marks
+         </span>
+        </div>
+        <div onclick="location.href='timetable.html'">
+         <i class="fa-solid fa-calendar-days">
+         </i>
+         <span>
+          Time Table
+         </span>
+        </div>
+        <div onclick="location.href='fees.html'">
+         <i class="fa-solid fa-indian-rupee-sign">
+         </i>
+         <span>
+          Fees
+         </span>
+        </div>
+        <div onclick="location.href='downloads.html'">
+         <i class="fa-solid fa-download">
+         </i>
+         <span>
+          Downloads
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- Bottom -->
+    <section class="bottom">
+     <!-- Top Performers -->
+     <div class="performers">
+      <div class="title">
+       <h2>
+        Class Top Performers
+       </h2>
+       <a href="class-students.html">
+        View Full List
+       </a>
+      </div>
+      <div class="students">
+       <div class="student">
+        <img src="images/student1.jpg"/>
+        <h4>
+         Huzefa Rahmani
+        </h4>
+        <p>
+         96.4%
+        </p>
+       </div>
+       <div class="student">
+        <img src="images/student2.jpg"/>
+        <h4>
+         Mustafiz Anwer
+        </h4>
+        <p>
+         95.1%
+        </p>
+       </div>
+       <div class="student">
+        <img src="images/student6.jpg"/>
+        <h4>
+         Muneeba Mehar
+        </h4>
+        <p>
+         94.8%
+        </p>
+       </div>
+       <div class="student">
+        <img src="images/student.jpg"/>
+        <h4>
+         Md Jakariya
+        </h4>
+        <p>
+         94.7%
+        </p>
+       </div>
+       <div class="student">
+        <img src="images/student5.jpg"/>
+        <h4>
+         Umair Rizwi
+        </h4>
+        <p>
+         94.3%
+        </p>
+       </div>
+       <div class="student">
+        <img src="images/student3.jpg"/>
+        <h4>
+         Falak Anjum
+        </h4>
+        <p>
+         94.2%
+        </p>
+       </div>
+      </div>
+     </div>
+     <!-- Notices -->
+     <div class="notices">
+      <div class="title">
+       <h2>
+        Recent Notices
+       </h2>
+       <a href="notices.html">
+        View All
+       </a>
+      </div>
+      <div class="notice">
+       <h4>
+        Half Yearly Exam Schedule
+       </h4>
+       <p>
+        Exams start from 15 September.
+       </p>
+      </div>
+      <div class="notice">
+       <h4>
+        PTM Meeting
+       </h4>
+       <p>
+        Sunday 18 August at 10 AM.
+       </p>
+      </div>
+      <div class="notice">
+       <h4>
+        Holiday Notice
+       </h4>
+       <p>
+        School will remain closed on 26 August.
+       </p>
+      </div>
+     </div>
+    </section>
+    <footer>
+     © 2002 Welcome Public School. All Rights Reserved.
+    </footer>
+   </main>
+  </div>
+  <!-- ==========================================
+      FLOATING LEARNING MENU
+  =========================================== -->
+  <div class="floating-learning-menu">
+   <!-- ======================================
+          AI TUTOR BUTTON
+          Hidden behind Learn initially
+      ======================================= -->
+   <a aria-label="Connect" class="floating-circle floating-ai" href="ptm.html">
+    <i class="fa-solid fa-user-group">
+    </i>
+    <span>
+     Connect
+    </span>
+   </a>
+   <!-- ======================================
+          LEARN BUTTON
+          Always visible
+      ======================================= -->
+   <a aria-label="Learn" class="floating-circle floating-learn" href="learning.html">
+    <i class="fa-solid fa-graduation-cap">
+    </i>
+    <span>
+     Learn
+    </span>
+   </a>
+  </div>
+  <script src="dashboard.js">
+  </script>
+  <script src="common.js">
+  </script>
+ </body>
+</html>
