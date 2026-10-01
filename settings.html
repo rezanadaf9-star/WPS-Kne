@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Welcome Public School</title>
+
+    <link rel="stylesheet" href="settings.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <img src="images/logo.png">
+
+            <div class="logo-text">
+
+                <h2>WELCOME</h2>
+                <h3>PUBLIC SCHOOL</h3>
+
+                <p>Established in 2002</p>
+                <p>Darnea Hat, Po- Gangi Hat, Dist- Kishanganj</p>
+                <p>BIHAR</p>
+
+            </div>
+
+        </div>
+
+        <ul>
+
+            <li onclick="location.href='dashboard.html'">
+                <i class="fa-solid fa-house"></i> Dashboard
+            </li>
+
+            <li onclick="location.href='profile.html'">
+                <i class="fa-solid fa-user"></i> My Profile
+            </li>
+
+            <li onclick="location.href='marks.html'">
+                <i class="fa-solid fa-chart-column"></i> My Marks
+            </li>
+
+            <li onclick="location.href='attendance.html'">
+                <i class="fa-solid fa-calendar-check"></i> Attendance
+            </li>
+
+            <li onclick="location.href='fees.html'">
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              <span>Fees</span>
+            </li>
+
+            <li onclick="location.href='notices.html'">
+                <i class="fa-solid fa-bell"></i> Notices
+            </li>
+
+            <li onclick="location.href='timetable.html'">
+                <i class="fa-solid fa-clock"></i> Timetable
+            </li>
+
+            <li onclick="location.href='teachers.html'">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              Teachers
+            </li>
+
+            <li onclick="location.href='answer-sheet.html'">
+
+              <i class="fa-solid fa-file-pen"></i>
+              Answer Sheets
+
+            </li>
+
+            <li onclick="location.href='results.html'">
+              <i class="fa-solid fa-poll-h"></i> 
+              Our Board Results
+            </li>
+
+            <li class="active">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </li>
+
+            <li class="logout-btn" onclick="window.location.href='login.html'">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <div aria-hidden="true" class="sidebar-overlay"></div>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <header>
+          <button aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-toggle" type="button"><i class="fa-solid fa-bars"></i></button>
+
+            <div>
+
+                <h1>Settings</h1>
+
+                <p>Manage your account and preferences</p>
+
+            </div>
+
+            <div class="profile-box" onclick="location.href='profile.html'">
+
+                <img src="images/student.jpg">
+
+                <div>
+
+                    <h3>Md Jakariya</h3>
+
+                    <span>Class X • Roll No. 02</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Personal Information -->
+
+        <section class="setting-card">
+
+            <h2><i class="fa-solid fa-user"></i> Personal Information</h2>
+
+            <div class="form-group">
+
+                <label>Student Name</label>
+
+                <input type="text" value="Md Jakariya">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Phone Number</label>
+
+                <input type="text" value="8757093039">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input type="email" value="jakariya@gmail.com">
+
+            </div>
+
+        </section>
+
+        <!-- Password -->
+
+        <section class="setting-card">
+
+            <h2><i class="fa-solid fa-lock"></i> Change Password</h2>
+
+            <div class="form-group">
+
+                <label>Current Password</label>
+
+                <input type="password">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>New Password</label>
+
+                <input type="password">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Confirm Password</label>
+
+                <input type="password">
+
+            </div>
+
+        </section>
+
+        <!-- Preferences -->
+
+        <section class="setting-card">
+
+            <h2><i class="fa-solid fa-sliders"></i> Preferences</h2>
+
+            <div class="toggle">
+
+                <span>Email Notifications</span>
+
+                <input type="checkbox" checked>
+
+            </div>
+
+            <div class="toggle">
+
+                <span>SMS Notifications</span>
+
+                <input type="checkbox" checked>
+
+            </div>
+
+            <div class="toggle">
+
+                <span>Dark Mode</span>
+
+                <input type="checkbox">
+
+            </div>
+
+        </section>
+
+        <!-- Buttons -->
+
+        <div class="button-section">
+
+            <button class="save-btn">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Changes
+
+            </button>
+
+            <button class="reset-btn">
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Reset
+
+            </button>
+
+            <button class="back-btn"
+            onclick="location.href='index.html'">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Dashboard
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="settings.js"></script>
+<script src="common.js"></script>
+
+</body>
+
+</html>

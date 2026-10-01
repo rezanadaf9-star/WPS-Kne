@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Class Timetable | Welcome Public School</title>
+
+    <link rel="stylesheet" href="timetable.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="sidebar-overlay"></div>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="School Logo">
+
+            <div class="logo-text">
+
+                <h2>WELCOME</h2>
+
+                <h3>PUBLIC SCHOOL</h3>
+
+                <p>Established in 2002</p>
+
+                <p>Darnea Hat, Po- Gangi Hat, Dist- Kishanganj</p>
+
+                <p>BIHAR</p>
+
+            </div>
+
+        </div>
+
+        <ul>
+
+            <li onclick="location.href='dashboard.html'">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li onclick="location.href='profile.html'">
+                <i class="fa-solid fa-user"></i>
+                My Profile
+            </li>
+
+            <li onclick="location.href='marks.html'">
+                <i class="fa-solid fa-chart-column"></i>
+                My Marks
+            </li>
+
+            <li onclick="location.href='attendance.html'">
+                <i class="fa-solid fa-calendar-check"></i>
+                Attendance
+            </li>
+
+            <li onclick="location.href='fees.html'">
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              <span>Fees</span>
+            </li>
+
+            <li onclick="location.href='notices.html'">
+                <i class="fa-solid fa-bell"></i>
+                Notices
+            </li>
+
+            <li class="active">
+                <i class="fa-solid fa-clock"></i>
+                Timetable
+            </li>
+
+            <li onclick="location.href='teachers.html'">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              Teachers
+            </li>
+
+            <li onclick="location.href='answer-sheet.html'">
+
+              <i class="fa-solid fa-file-pen"></i>
+              Answer Sheets
+
+            </li>
+
+            <li onclick="location.href='results.html'">
+              <i class="fa-solid fa-poll-h"></i> 
+              Our Board Results
+            </li>
+
+            <li onclick="location.href='settings.html'">
+              <i class="fa-solid fa-gear"></i>
+              <span>Settings</span>
+            </li>
+
+            <li class="logout-btn" onclick="window.location.href='login.html'">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main">
+
+        <header>
+            <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div>
+
+                <h1>Weekly Class Timetable</h1>
+
+                <p>Academic Session 2026–2027</p>
+
+            </div>
+
+            <div class="profile-box" onclick="location.href='profile.html'">
+
+                <img src="images/student.jpg" alt="Student">
+
+                <div>
+
+                    <h3>Md Jakariya</h3>
+
+                    <span>Class X • Roll No. 02</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ================= STUDENT CARD ================= -->
+
+        <section class="student-card">
+
+            <img src="images/student.jpg" alt="Student">
+
+            <div class="student-info">
+
+                <h2>Md Jakariya</h2>
+
+                <p><strong>Class:</strong> X - A</p>
+
+                <p><strong>Roll No:</strong> 02</p>
+
+                <p><strong>Class Teacher:</strong> Mr Asif Naqui</p>
+
+            </div>
+
+        </section>
+
+        <!-- ================= MONDAY ================= -->
+
+        <section class="day-card">
+
+            <h2><i class="fa-solid fa-calendar-day"></i> Monday</h2>
+
+            <div class="period">
+                <span>08:00 - 08:45</span>
+                <strong>English</strong>
+            </div>
+
+            <div class="period">
+                <span>08:45 - 09:30</span>
+                <strong>Mathematics</strong>
+            </div>
+
+            <div class="period">
+                <span>09:30 - 10:15</span>
+                <strong>Science</strong>
+            </div>
+
+            <div class="period break">
+                <span>10:15 - 10:30</span>
+                <strong>☕ Break</strong>
+            </div>
+
+            <div class="period">
+                <span>10:30 - 11:15</span>
+                <strong>Social Science</strong>
+            </div>
+
+            <div class="period">
+                <span>11:15 - 12:00</span>
+                <strong>Hindi</strong>
+            </div>
+
+            <div class="period">
+                <span>12:00 - 12:45</span>
+                <strong>Computer</strong>
+            </div>
+
+        </section>
+                <!-- ================= TUESDAY ================= -->
+
+        <section class="day-card">
+
+            <h2><i class="fa-solid fa-calendar-day"></i> Tuesday</h2>
+
+            <div class="period">
+                <span>08:00 - 08:45</span>
+                <strong>Mathematics</strong>
+            </div>
+
+            <div class="period">
+                <span>08:45 - 09:30</span>
+                <strong>English</strong>
+            </div>
+
+            <div class="period">
+                <span>09:30 - 10:15</span>
+                <strong>Computer</strong>
+            </div>
+
+            <div class="period break">
+                <span>10:15 - 10:30</span>
+                <strong>☕ Break</strong>
+            </div>
+
+            <div class="period">
+                <span>10:30 - 11:15</span>
+                <strong>Science</strong>
+            </div>
+
+            <div class="period">
+                <span>11:15 - 12:00</span>
+                <strong>Social Science</strong>
+            </div>
+
+            <div class="period">
+                <span>12:00 - 12:45</span>
+                <strong>Hindi</strong>
+            </div>
+
+        </section>
+
+        <!-- ================= WEDNESDAY ================= -->
+
+        <section class="day-card">
+
+            <h2><i class="fa-solid fa-calendar-day"></i> Wednesday</h2>
+
+            <div class="period">
+                <span>08:00 - 08:45</span>
+                <strong>Science</strong>
+            </div>
+
+            <div class="period">
+                <span>08:45 - 09:30</span>
+                <strong>Hindi</strong>
+            </div>
+
+            <div class="period">
+                <span>09:30 - 10:15</span>
+                <strong>Mathematics</strong>
+            </div>
+
+            <div class="period break">
+                <span>10:15 - 10:30</span>
+                <strong>☕ Break</strong>
+            </div>
+
+            <div class="period">
+                <span>10:30 - 11:15</span>
+                <strong>English</strong>
+            </div>
+
+            <div class="period">
+                <span>11:15 - 12:00</span>
+                <strong>Computer</strong>
+            </div>
+
+            <div class="period">
+                <span>12:00 - 12:45</span>
+                <strong>Social Science</strong>
+            </div>
+
+        </section>
+
+        <!-- ================= THURSDAY ================= -->
+
+        <section class="day-card">
+
+            <h2><i class="fa-solid fa-calendar-day"></i> Thursday</h2>
+
+            <div class="period">
+                <span>08:00 - 08:45</span>
+                <strong>English</strong>
+            </div>
+
+            <div class="period">
+                <span>08:45 - 09:30</span>
+                <strong>Science</strong>
+            </div>
+
+            <div class="period">
+                <span>09:30 - 10:15</span>
+                <strong>Social Science</strong>
+            </div>
+
+            <div class="period break">
+                <span>10:15 - 10:30</span>
+                <strong>☕ Break</strong>
+            </div>
+
+            <div class="period">
+                <span>10:30 - 11:15</span>
+                <strong>Mathematics</strong>
+            </div>
+
+            <div class="period">
+                <span>11:15 - 12:00</span>
+                <strong>Computer</strong>
+            </div>
+
+            <div class="period">
+                <span>12:00 - 12:45</span>
+                <strong>Hindi</strong>
+            </div>
+
+        </section>
+
+        <!-- ================= FRIDAY ================= -->
+
+        <section class="day-card">
+
+            <h2><i class="fa-solid fa-calendar-day"></i> Friday</h2>
+
+            <div class="period">
+                <span>08:00 - 08:45</span>
+                <strong>Mathematics</strong>
+            </div>
+
+            <div class="period">
+                <span>08:45 - 09:30</span>
+                <strong>Computer</strong>
+            </div>
+
+            <div class="period">
+                <span>09:30 - 10:15</span>
+                <strong>English</strong>
+            </div>
+
+            <div class="period break">
+                <span>10:15 - 10:30</span>
+                <strong>☕ Break</strong>
+            </div>
+
+            <div class="period">
+                <span>10:30 - 11:15</span>
+                <strong>Science</strong>
+            </div>
+
+            <div class="period">
+                <span>11:15 - 12:00</span>
+                <strong>Hindi</strong>
+            </div>
+
+            <div class="period">
+                <span>12:00 - 12:45</span>
+                <strong>Social Science</strong>
+            </div>
+
+        </section>
+
+        <!-- ================= SATURDAY ================= -->
+
+        <section class="day-card">
+
+            <h2><i class="fa-solid fa-calendar-day"></i> Saturday</h2>
+
+            <div class="period">
+                <span>08:00 - 08:45</span>
+                <strong>Moral Science</strong>
+            </div>
+
+            <div class="period">
+                <span>08:45 - 09:30</span>
+                <strong>Sports</strong>
+            </div>
+
+            <div class="period">
+                <span>09:30 - 10:15</span>
+                <strong>Computer Lab</strong>
+            </div>
+
+            <div class="period break">
+                <span>10:15 - 10:30</span>
+                <strong>☕ Break</strong>
+            </div>
+
+            <div class="period">
+                <span>10:30 - 11:15</span>
+                <strong>Library</strong>
+            </div>
+
+            <div class="period">
+                <span>11:15 - 12:00</span>
+                <strong>Art & Craft</strong>
+            </div>
+
+        </section>
+
+        <!-- ================= ACTION BUTTONS ================= -->
+
+        <section class="button-section">
+
+            <button class="download-btn">
+                <i class="fa-solid fa-download"></i>
+                Download Timetable
+            </button>
+
+            <button class="print-btn">
+                <i class="fa-solid fa-print"></i>
+                Print Timetable
+            </button>
+
+            <button class="back-btn" onclick="location.href='index.html'">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Dashboard
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="timetable.js"></script>
+<script src="common.js"></script>
+
+</body>
+
+</html>
